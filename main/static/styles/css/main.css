@@ -1,0 +1,201 @@
+@font-face {
+  font-family: 'myFont';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/eot/IRANSansWeb.eot");
+  src: url("../fonts/woff2/IRANSansWeb.woff2") format("woff2"), url("../fonts/woff/IRANSansWeb.woff") format("woff"), url("../fonts/ttf/IRANSansWeb.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'myFont_black';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/eot/IRANSansWeb_Black.eot");
+  src: url("../fonts/woff2/IRANSansWeb_Black.woff2") format("woff2"), url("../fonts/woff/IRANSansWeb_Black.woff") format("woff"), url("../fonts/ttf/IRANSansWeb_Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'myFont_bold';
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/eot/IRANSansWeb_Bold.eot");
+  src: url("../fonts/woff2/IRANSansWeb_Bold.woff2") format("woff2"), url("../fonts/woff/IRANSansWeb_Bold.woff") format("woff"), url("../fonts/ttf/IRANSansWeb_Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'myFont_medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/eot/IRANSansWeb_Medium.eot");
+  src: url("../fonts/woff2/IRANSansWeb_Medium.woff2") format("woff2"), url("../fonts/woff/IRANSansWeb_Medium.woff") format("woff"), url("../fonts/ttf/IRANSansWeb_Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'myFont_light';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/eot/IRANSansWeb_Light.eot");
+  src: url("../fonts/woff2/IRANSansWeb_Light.woff2") format("woff2"), url("../fonts/woff/IRANSansWeb_Light.woff") format("woff"), url("../fonts/ttf/IRANSansWeb_Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'myFont_ultraLight';
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/eot/IRANSansWeb_UltraLight.eot");
+  src: url("../fonts/woff2/IRANSansWeb_UltraLight.woff2") format("woff2"), url("../fonts/woff/IRANSansWeb_UltraLight.woff") format("woff"), url("../fonts/ttf/IRANSansWeb_UltraLight.ttf") format("truetype");
+}
+
+html {
+  font-size: 18px;
+  font-family: 'myFont';
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 1180));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@-webkit-keyframes header_title {
+  0% {
+    text-shadow: 5px 5px 1px rgba(181, 3, 3, 0.5);
+  }
+  10% {
+    text-shadow: 5px 5px 1px rgba(181, 3, 3, 0);
+  }
+  25% {
+    text-shadow: 5px 5px 1px rgba(181, 3, 3, 0.5);
+  }
+  34% {
+    text-shadow: 5px 5px 1px rgba(181, 3, 3, 0);
+  }
+  70% {
+    text-shadow: 5px 5px 1px rgba(181, 3, 3, 0.5);
+  }
+  78% {
+    text-shadow: 5px 5px 1px rgba(181, 3, 3, 0);
+  }
+  100% {
+    text-shadow: 5px 5px 1px rgba(181, 3, 3, 0.5);
+  }
+}
+
+@keyframes header_title {
+  0% {
+    text-shadow: 5px 5px 1px rgba(181, 3, 3, 0.5);
+  }
+  10% {
+    text-shadow: 5px 5px 1px rgba(181, 3, 3, 0);
+  }
+  25% {
+    text-shadow: 5px 5px 1px rgba(181, 3, 3, 0.5);
+  }
+  34% {
+    text-shadow: 5px 5px 1px rgba(181, 3, 3, 0);
+  }
+  70% {
+    text-shadow: 5px 5px 1px rgba(181, 3, 3, 0.5);
+  }
+  78% {
+    text-shadow: 5px 5px 1px rgba(181, 3, 3, 0);
+  }
+  100% {
+    text-shadow: 5px 5px 1px rgba(181, 3, 3, 0.5);
+  }
+}
+
+nav {
+  width: 100px;
+  min-height: 100vh;
+  background-color: black;
+  position: fixed;
+  z-index: 1000;
+  left: 0px;
+}
+
+header {
+  position: relative;
+}
+
+header video {
+  width: 100%;
+}
+
+header div.header-introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+header div.header-introduction div.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  left: 20%;
+  bottom: 10%;
+}
+
+header div.header-introduction div.content h1 {
+  font-size: 8rem;
+  color: #b50303;
+  font-family: oswald;
+  animation: header_title 0.25s infinite alternate-reverse;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header div.header-introduction div.content h1:hover {
+  color: white;
+}
+
+header div.header-introduction div.content p {
+  font-size: 0.8rem;
+  position: relative;
+  bottom: 30px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'myFont';
+  direction: rtl;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=main.css.map */

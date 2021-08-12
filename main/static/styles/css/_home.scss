@@ -1,0 +1,50 @@
+nav{
+    width: 100px;
+    min-height: 100vh;
+    background-color: black;
+    position:fixed;
+    z-index: 1000;
+    left: 0px;
+}
+
+header{
+    position: relative;
+    video{
+        width: 100%;
+    }
+
+    div.header-introduction{
+        @include flex-center-center();
+
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: rgba(0,0,0,0.75);
+        height: 100%;
+        width: 100%;
+        color: white;
+
+        div.content{
+            @include flex-column();
+            position: relative;
+            left: 20%;
+            bottom: 10%;
+            h1{
+                font-size: $font1;
+                color: $bloody_red;
+                font-family: oswald;
+                animation: header_title 0.25s infinite alternate-reverse;
+                animation-timing-function: ease-in-out;
+                transition: all 0.5s;
+            }
+            h1:hover{
+                color: white;
+            }
+            p{
+                font-size: $font4;
+                position: relative;
+                bottom: 30px;
+            }
+        }
+    }
+}

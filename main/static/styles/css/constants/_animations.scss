@@ -1,0 +1,23 @@
+@keyframes header_title{
+    0%{
+        text-shadow: 5px 5px 1px rgba(181,3,3, 0.5);
+    }
+    10%{
+        text-shadow: 5px 5px 1px rgba(181,3,3, 0);;
+    }
+    25%{
+        text-shadow: 5px 5px 1px rgba(181,3,3, 0.5);;
+    }
+    34%{
+        text-shadow: 5px 5px 1px rgba(181,3,3, 0);;
+    }
+    70%{
+        text-shadow: 5px 5px 1px rgba(181,3,3, 0.5);;
+    }
+    78%{
+        text-shadow: 5px 5px 1px rgba(181,3,3, 0);;
+    }
+    100%{
+        text-shadow: 5px 5px 1px rgba(181,3,3, 0.5);;
+    }
+}

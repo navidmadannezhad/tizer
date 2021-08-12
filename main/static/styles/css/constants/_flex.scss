@@ -1,0 +1,47 @@
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-column-reverse{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-row-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+@mixin flex-center-center{
+    @include flex-row();
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-row-between-center{
+    @include flex-row();
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-row-start-center{
+    @include flex-row();
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin flex-column-center{
+    @include flex-column();
+    align-items: center;
+}
+
+@mixin flex-column-reverse-center{
+    @include flex-column-reverse();
+    align-items: center;
+}

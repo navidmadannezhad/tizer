@@ -1,12 +1,3 @@
-nav{
-    width: 100px;
-    min-height: 100vh;
-    background-color: black;
-    position:fixed;
-    z-index: 1000;
-    left: 0px;
-}
-
 header{
     position: relative;
     video{
@@ -19,8 +10,8 @@ header{
         position: absolute;
         top: 0px;
         left: 0px;
-        background-color: rgba(0,0,0,0.75);
-        height: 100%;
+        background-color: rgba(0,0,0,0.3);
+        height: 98.5%;
         width: 100%;
         color: white;
 
@@ -44,6 +35,279 @@ header{
                 font-size: $font4;
                 position: relative;
                 bottom: 30px;
+            }
+        }
+    }
+}
+
+main{
+    margin-top: -15px;
+    div.header-seperator{
+        background-color: $bloody_red;
+        @include flex-column-center();
+        padding: 50px 0px;
+        color: white;
+        div.quote{
+            font-size: $font4;
+            padding: 0px 0px 5px 0px;
+        }
+        div.author{
+            font-size: $font4_responsive;
+            font-style: italic;
+            color: rgba(255,255,255,0.4);
+        }
+    }
+
+    div.services-section{
+        width: 100%;
+        height: 100vh;
+        @include imagedBackground(to left);
+        @include flex-row();
+        align-items: center;
+        position: relative;
+        & > div{
+            width: 50%;
+        }
+        div.services{
+            color: white;
+            
+            div.services-intro{
+                margin: 0px 100px 0px 0px;
+                font-size: $font2;
+                font-weight: bold;
+            }
+            div.services-options{
+                ul{
+                    margin: 0px 100px 0px 0px;
+                    list-style: none;
+                    li{
+                        font-size: $font4;
+                        margin: 30px 50px 0px 0px;
+                        color: rgb(179, 179, 179);
+                        &::before{
+                            content: "\2022"; 
+                            color: $bloody_red; 
+                            font-weight: bold; 
+                            display: inline-block; 
+                            width: 1em; 
+                        }
+                    }
+                }
+            }
+        }
+
+        div.laptop{
+            height: 100%;
+            position: relative;
+            @include flex-center-center();
+            div.screen{
+                position: absolute;
+                width: 37%;
+                padding-top: 23%;
+                margin-bottom: 11%;
+                background-color: rgba(255,255,255,0.3);
+                animation: tv 0.25s infinite alternate-reverse;
+            }
+            img{
+                width: 50%;
+            }
+        }
+    }
+
+    div.work-section{
+        height: 100vh;
+        position: relative;
+        @include imagedBackground(to right);
+        @include flex-row-reverse-between-center();
+        & > div{
+            width: 50%;
+        }
+
+        div.work-intro{
+            color: white;
+            @include flex-column-center();
+            text-align: center;
+            p.title{
+                font-size: $font2;
+                font-weight: bold;
+            }
+            p.message{
+                font-size: $font4;
+                color: rgb(179, 179, 179);
+                padding: 50px 70px;
+            }
+            a{
+                background-color: $bloody_red;
+                margin-top: 10px;
+                @include anchor();
+                border-radius: 10px;
+                padding: 15px 60px;
+                font-size: 0.75rem;
+            }
+        }
+
+        div.works{
+            height: 100%;
+            position: relative;
+            @include flex-column-center();
+            overflow-y: auto;
+
+            div.work{
+                width: 60%;
+                margin: 75px 0px;
+                border: none;
+            }
+            
+        }
+
+        div.top-darken, div.bottom-darken{
+            position: absolute;
+            width: 100%;
+            padding-top: 10%;
+            right: 0;
+            z-index: 100;
+        }
+        div.top-darken{
+            top: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+        }
+        div.bottom-darken{
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+        }
+
+        .keep-scrolling {
+            @include scrollBarDeleter();    
+        }
+           
+    }
+
+    div.corp-section{
+        height: 100vh;
+        background-color: black;
+    }
+}
+
+
+// Responsive Codes
+@media only screen and (max-width:700px){
+    nav{
+        background-color: transparent;
+        svg{
+            display: none;
+        }
+    }
+    
+    header{
+        width: 100%;
+        min-height: 100vh;
+        video{
+            display: none
+        }
+    
+        div.header-introduction{
+            @include flex-center-center();
+
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../files/mobile-background.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+    
+            div.content{
+                @include flex-column-center();
+                position: static;
+            }
+        }
+    }
+
+    main{
+        margin-top: -15px;
+        div.header-seperator{
+            background-color: $bloody_red;
+            @include flex-column-center();
+            padding: 50px 0px;
+            color: white;
+            div.quote{
+                font-size: $font4;
+                padding: 0px 0px 5px 0px;
+            }
+            div.author{
+                font-size: $font4_responsive;
+            }
+        }
+    
+        div.services-section{
+            background-image: linear-gradient(to left, black 20%, rgba(0,0,0,0.8)) ,url('../../files/services.jpg');
+            align-items: center;
+            div.services{
+                width: 100%;
+                text-align: center;
+
+                div.services-intro{
+                    margin: 0px 0px;
+                    font-size: $font2_responsive !important;
+                }
+                div.services-options{
+                    ul{
+                        margin: 0px 0px 0px 0px;
+                        @include flex-column-center();
+                        li, div{
+                            font-size: $font4_responsive !important;
+                            margin: 15px 0px 0px 0px;
+                            
+                            &::before{
+                                content: ""; 
+                            }
+                        }
+                        div.seperator{
+                            width: 30px;
+                            height: 5px;
+                            border-radius: 5px;
+                            background-color: $bloody_red;
+                        }
+                    }
+                }
+            }
+    
+            div.laptop{
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:450px){
+    header{
+    
+        div.header-introduction{
+    
+            div.content{
+                h1{
+                    font-size: $font1_responsive;
+                    color: $bloody_red;
+                }
+                p{
+                    font-size: $font4_responsive;
+                    position: static;
+                }
+            }
+        }
+    }
+
+    main{
+        div.header-seperator{
+            text-align: center;
+            padding: 50px 30px;
+            color: white;
+            div.quote{
+                font-size: $font4;
+                padding: 0px 0px 5px 0px;
+            }
+            div.author{
+                font-size: $font4_responsive;
+                font-style: italic;
+                color: rgba(255,255,255,0.4);
             }
         }
     }

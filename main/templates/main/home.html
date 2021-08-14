@@ -1,11 +1,7 @@
 {% extends './base.html' %}
 
 {% block 'content' %}
-<nav>
-
-</nav>
-
-<header>
+<header class="section">
     <video autoplay muted loop id="myVideo">
         {% load static %}
         <source src="{% static 'files/header.mp4' %}" type="video/mp4">
@@ -18,4 +14,72 @@
         </div>
     </div>
 </header>
+
+
+<main>
+    <div class="header-seperator">
+        <div class="quote">
+            اگر تصاویر هزاران کلمه ناگفته در خود دارند، ویدیو ها مانند یک کتابخانه هستند!
+        </div>
+        <div class="author">
+           "سرینیواس نارایانان - سرپرست بخش هوش مصنوعی فیسبوک"
+        </div>
+    </div>
+
+    <div class="services-section">
+        <div class="services">
+            <div class="services-intro" data-aos="fade-left" data-aos-duration="2000">
+                خدماتی که به شما ارائه می‌دیم...
+            </div>
+            <div class="services-options" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="1000" data-aos-once="true">
+                <ul>
+                    <li>تیزر های تبلیغاتی برای کسب و کار شما</li>
+                    <div class="seperator"></div>
+                    <li>مشاوره و طراحی استراتژی‌های تبلیغاتی</li>
+                    <div class="seperator"></div>
+                    <li>اشکال یابی و بهبود برنامه های تبلیغاتی</li>
+                    <div class="seperator"></div>
+                    <li>طراحی انواع پوستر و لوگو</li>
+                    <div class="seperator"></div>
+                    <li>ساخت انیمیشن</li>
+                    <div class="seperator"></div>
+                </ul>
+            </div>
+        </div>
+        <div class="laptop">
+            <div class="screen"></div>
+            <img src="{% static 'files/laptop.png' %}" alt="">
+        </div>
+    </div>
+
+    <div class="work-section">
+        <div class="work-intro">
+            <p class="title" data-aos="fade" data-aos-duration="2000" data-aos-once="true">چندی از نمونه کار ها...</p>
+            <p class="message" data-aos="fade" data-aos-duration="2000" data-aos-once="true" data-aos-delay="1000">
+                تیم تیزر همواره سعی بر ارائه بهترین تیزرهای تبلیغاتی، جهت موفقیت کسب و کار شما در هر کمپین تبلیغاتی‌ دارد.
+            </p>
+            <a href="#" data-aos="fade" data-aos-duration="2000" data-aos-once="true" data-aos-delay="1000">
+                مشاهده تمام نمونه کار ها
+            </a>
+        </div>
+        <div class="top-darken"></div>
+        <div class="works keep-scrolling">
+            <div class="work">
+                <div id="79039686089"><script type="text/JavaScript" src="https://www.aparat.com/embed/0klxC?data[rnddiv]=79039686089&data[responsive]=yes"></script></div>
+            </div>
+            <div class="work">
+                <div id="10080156393"><script type="text/JavaScript" src="https://www.aparat.com/embed/NO5si?data[rnddiv]=10080156393&data[responsive]=yes"></script></div>
+            </div>
+            <div class="work">
+                <div id="87668251956"><script type="text/JavaScript" src="https://www.aparat.com/embed/i2rXT?data[rnddiv]=87668251956&data[responsive]=yes"></script></div>
+            </div>
+        </div>
+        <div class="bottom-darken"></div>
+    </div>
+
+    <div class="corp-section">
+
+    </div>
+
+</main>
 {% endblock %}

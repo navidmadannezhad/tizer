@@ -1,7 +1,16 @@
 $font1: 8rem;
+$font1_responsive: 5rem;
+
 $font2: 1.5rem;
+$font2_responsive: 1.2rem;
+
 $font3: 1rem;
+$font3_responsive: 5rem;
+
 $font4: 0.8rem;
+$font4_responsive: 0.7rem;
+
+
 
 // Setting responsive fonts
 @font-face {
@@ -68,7 +77,6 @@ $font4: 0.8rem;
 
 html {
     font-size: 18px;
-    font-family: 'myFont';
   }
   @media screen and (min-width: 320px) {
     html {

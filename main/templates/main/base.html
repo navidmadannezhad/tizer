@@ -7,13 +7,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block 'title' %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="{% static 'styles/css/main.css' %}">
 </head>
 <body>
-    
+  <nav id="navbar">
+      <button class="navbar-button">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </button>
+      <div class="navigator">
+          <svg width="50" height="500">   
+              <line x1="25" y1="200" x2="25" y2="450"
+              style="stroke-width: 2; stroke: rgb(184, 184, 184);"/>
+          </svg>
+      </div>
+  </nav>
+
+  <div class="menu">
+    <div class="options">
+      <div class="option">
+        <a href="">
+         خانه
+        </a>
+     </div>
+     <div class="option">
+          <a href="">
+          درباره ما
+          </a>
+      </div>
+      <div class="option">
+        <a href="">
+        پروژه ها
+        </a>
+      </div>
+      <div class="option">
+        <a href="">
+        تماس با ما
+        </a>
+      </div>
+    </div>
+  </div>
+
     {% block 'content' %}
 
     {% endblock %}
 
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="{% static 'styles/js/home.js' %}"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

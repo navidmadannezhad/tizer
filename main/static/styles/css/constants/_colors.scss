@@ -1,1 +1,32 @@
 $bloody_red: #b50303;
+$darkForeGround: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+
+@function background($direction){
+    @return linear-gradient($direction, black 20%, rgba(0,0,0,0.4)), linear-gradient(to top, black 20%, rgba(0,0,0,0.1)),url('../../files/services.jpg');
+}
+
+@mixin imagedBackground($direction){
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: background($direction);
+}
+
+@mixin anchor(){
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+@mixin scrollBarDeleter(){
+    overflow-y: scroll; /* Add the ability to scroll y axis*/
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

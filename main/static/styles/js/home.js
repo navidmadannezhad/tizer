@@ -1,35 +1,105 @@
-let menuButton = document.querySelector('.navbar-button');
-let menu = document.querySelector('div.menu');
-console.log(menu);
+// turns nodeList into array - nodeList doesn't have indexOf() method
+let navigatorButtons = Array.prototype.slice.call(document.querySelectorAll('.navigator-button'));
+let homeNavigatorButton = document.querySelector('.home-navigator');
+let bloody_red = '#b50303';
+
 // sections
+let headerSection = document.querySelector('header');
+let headerSectionDist = headerSection.offsetTop;
 let servicesSection = document.querySelector('.services-section');
+let servicesSectionDist = servicesSection.offsetTop;
+let corpSection = document.querySelector('div.corp-section');
+let corpSectionDist = corpSection.offsetTop;
+let workSection = document.querySelector('.work-section');
+let workSectionDist = workSection.offsetTop;
 
-menuButton.addEventListener('click', function(event){
-    let menuIsClicked = menuButton.classList.contains('navbar-button-clicked');
+let sections = [
+    {
+        name: 'header',
+        node: headerSection,
+        distance: headerSectionDist
+    },
+    {
+        name: 'services',
+        node: servicesSection,
+        distance: servicesSectionDist
+    },
+    {
+        name: 'work',
+        node: workSection,
+        distance: workSectionDist
+    },
+    {
+        name: 'corp',
+        node: corpSection,
+        distance: corpSectionDist
+    },
+]
 
-    if(menuIsClicked){
-        closeMenu();
-    }else{
-        openMenu();
-    }
-    console.log(event.target);
-})
+// ----------------------------------SCROLL CODES ----------------------------
 
-function closeMenu(){
-    menuButton.classList.remove('navbar-button-clicked');
-    menu.style.top = '-1000px';
+activateNavigatorButton(homeNavigatorButton);
+
+navigatorButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        let section = sectionFromThe(button);
+        makeOtherButtonsInactive();
+        activateNavigatorButton(button);
+        scrollToSection(section);
+    })
+});
+
+function sectionFromThe(button){
+    let buttonIndex = navigatorButtons.indexOf(button);
+    return sections[buttonIndex];
 }
 
-function openMenu(){
-    menuButton.classList.add('navbar-button-clicked');
-    menu.style.top = '0px';
+function scrollToSection(section){
+    window.scrollTo({
+        top: section.distance,
+        left: 0,
+        behavior: 'smooth'
+    });
 }
 
-// document.addEventListener('scroll', function(event){
-//     servicesSectionFromTop = servicesSection.offsetTop;
-//     if(window.innerHeight - servicesSectionFromTop == 0){
-//         console.log('we reached the services');
-//     }
-//     console.log(servicesSection.scrollHeight);
-//     console.log(window.scrollY);
-// });
+function makeOtherButtonsInactive(){
+    navigatorButtons.forEach(button => {
+        inactiveNavigatorButton(button);
+    })
+}
+
+function activateNavigatorButton(node){
+    node.classList.add('active');
+}
+
+function inactiveNavigatorButton(node){
+    node.classList.remove('active');
+}
+
+document.addEventListener('scroll', function(event){
+    let scrolledDistance = window.scrollY + window.innerHeight;
+    sections.forEach(section => {
+        if(scrolledDistance >= section.distance){
+            highlightTitleOf(section);
+            makeOtherButtonsInactive();
+            
+            let button = buttonFromTheSection(section);
+            activateNavigatorButton(button);
+        }
+    })
+});
+
+function buttonFromTheSection(section){
+    let index = sections.indexOf(section);
+    return navigatorButtons[index];
+}
+
+function highlightTitleOf(section){
+    let sectionTitleNode = section.node.querySelector('*').children[0];
+    sectionTitleNode.style.transform = 'translate(0,0)';
+    sectionTitleNode.style.color = 'white';
+    sectionTitleNode.style.filter = 'blur(0)';
+}
+
+
+// ---------------------------------------------------------------------

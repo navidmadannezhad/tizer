@@ -43,24 +43,14 @@ header{
 main{
     margin-top: -15px;
     div.header-seperator{
+        @include quote-seperator();
         background-color: $bloody_red;
-        @include flex-column-center();
-        padding: 50px 0px;
-        color: white;
-        div.quote{
-            font-size: $font4;
-            padding: 0px 0px 5px 0px;
-        }
-        div.author{
-            font-size: $font4_responsive;
-            font-style: italic;
-            color: rgba(255,255,255,0.4);
-        }
     }
 
     div.services-section{
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
+        height: auto;
         @include imagedBackground(to left);
         @include flex-row();
         align-items: center;
@@ -75,6 +65,7 @@ main{
                 margin: 0px 100px 0px 0px;
                 font-size: $font2;
                 font-weight: bold;
+                @include fadeWhenNotScrolled(20px, -20px);
             }
             div.services-options{
                 ul{
@@ -130,6 +121,7 @@ main{
             p.title{
                 font-size: $font2;
                 font-weight: bold;
+                @include fadeWhenNotScrolled(0, -200px);
             }
             p.message{
                 font-size: $font4;
@@ -137,12 +129,7 @@ main{
                 padding: 50px 70px;
             }
             a{
-                background-color: $bloody_red;
-                margin-top: 10px;
-                @include anchor();
-                border-radius: 10px;
-                padding: 15px 60px;
-                font-size: 0.75rem;
+                @include all-works-button();
             }
         }
 
@@ -179,17 +166,85 @@ main{
         .keep-scrolling {
             @include scrollBarDeleter();    
         }
+
+        a.all-works-mobile{
+            @include all-works-button();
+            margin-top: 20px;
+            display: none;
+        }
            
     }
 
-    div.corp-section{
-        height: 100vh;
+    div.service-work-seperator{
+        @include quote-seperator();
         background-color: black;
+        border-style: dotted none;
+        border-width: 3px;
+        border-color: $bloody_red;
+    }
+
+    div.corp-section{
+        min-height: 100vh;
+        height: auto;
+        background:linear-gradient(to bottom, black 10%, #1b1b1b);
+        @include flex-column-center();
+
+        div.corp-intro{
+            margin-top: 100px;
+            width: 80%;
+            font-size: $font2;
+            font-weight: bold;
+            color: white;
+            p.title{
+                @include fadeWhenNotScrolled(20px, -20px);
+            }
+        }
+        div.corps{
+            margin-top: 30px;
+            width: 80%;
+            @include flex-row();
+            justify-content:  center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            div.corp{
+                width:200px;
+                margin: 0px 20px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
 
+
 // Responsive Codes
+@media only screen and (max-width: 900px) and (min-width: 700px){
+    div.services-section{
+        div.services{
+            div.services-intro{
+                margin: 0px 50px 0px 0px !important;
+            }
+            div.services-options{
+                ul{
+                    margin: 0px 50px 0px 0px !important;
+                }
+            }
+        }
+    }
+
+    div.work-section{
+        div.work-intro{
+            a{
+                @include all-works-button();
+                padding: 10px 40px;
+            }
+        }         
+    }
+}
+
 @media only screen and (max-width:700px){
     nav{
         background-color: transparent;
@@ -223,22 +278,11 @@ main{
 
     main{
         margin-top: -15px;
-        div.header-seperator{
-            background-color: $bloody_red;
-            @include flex-column-center();
-            padding: 50px 0px;
-            color: white;
-            div.quote{
-                font-size: $font4;
-                padding: 0px 0px 5px 0px;
-            }
-            div.author{
-                font-size: $font4_responsive;
-            }
-        }
-    
         div.services-section{
-            background-image: linear-gradient(to left, black 20%, rgba(0,0,0,0.8)) ,url('../../files/services.jpg');
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url('../../files/services.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             align-items: center;
             div.services{
                 width: 100%;
@@ -274,6 +318,59 @@ main{
                 display: none;
             }
         }
+
+        div.work-section{
+            min-height: 100vh;
+            height: auto;
+            padding-bottom: 100px;
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url('../../files/services.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            @include flex-column-center();
+            & > div{
+                width: 100%;
+            }
+    
+            div.work-intro{
+                margin-top: 100px;
+                p.title{
+                    font-size: $font2_responsive !important;
+                }
+                a.all-works-desktop{
+                    display: none;
+                }
+            }
+    
+            div.works{
+                height: auto;
+                div.work{
+                    width: 60%;
+                    margin: 10px 0px;
+                }
+                
+            }
+    
+            div.top-darken, div.bottom-darken{
+                display: none;
+            }
+
+            a.all-works-mobile{
+                display: inline-block;
+                padding: 15px 0px;
+                text-align: center;
+                width: 60%;
+            }
+               
+        }
+
+        div.corp-section{
+            padding-bottom: 100px;
+            div.corp-intro{
+                font-size: $font2_responsive !important;
+                text-align: center;
+            }
+        }
     }
 }
 
@@ -296,19 +393,8 @@ main{
     }
 
     main{
-        div.header-seperator{
-            text-align: center;
-            padding: 50px 30px;
-            color: white;
-            div.quote{
-                font-size: $font4;
-                padding: 0px 0px 5px 0px;
-            }
-            div.author{
-                font-size: $font4_responsive;
-                font-style: italic;
-                color: rgba(255,255,255,0.4);
-            }
+        div.header-seperator, div.service-work-seperator{
+            @include quote-seperator-responsive();
         }
     }
 }

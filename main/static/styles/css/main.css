@@ -228,7 +228,6 @@ main {
 }
 
 main div.header-seperator {
-  background-color: #b50303;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,6 +240,7 @@ main div.header-seperator {
           align-items: center;
   padding: 50px 0px;
   color: white;
+  background-color: #b50303;
 }
 
 main div.header-seperator div.quote {
@@ -256,7 +256,8 @@ main div.header-seperator div.author {
 
 main div.services-section {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -287,6 +288,13 @@ main div.services-section div.services div.services-intro {
   margin: 0px 100px 0px 0px;
   font-size: 1.5rem;
   font-weight: bold;
+  color: #b50303;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: translate(20px, -20px);
+          transform: translate(20px, -20px);
+  -webkit-transition: all 2s;
+  transition: all 2s;
 }
 
 main div.services-section div.services div.services-options ul {
@@ -384,6 +392,13 @@ main div.work-section div.work-intro {
 main div.work-section div.work-intro p.title {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #b50303;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: translate(0, -200px);
+          transform: translate(0, -200px);
+  -webkit-transition: all 2s;
+  transition: all 2s;
 }
 
 main div.work-section div.work-intro p.message {
@@ -460,9 +475,131 @@ main div.work-section .keep-scrolling::-webkit-scrollbar {
   display: none;
 }
 
-main div.corp-section {
-  height: 100vh;
+main div.work-section a.all-works-mobile {
+  background-color: #b50303;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 60px;
+  font-size: 0.75rem;
+  margin-top: 20px;
+  display: none;
+}
+
+main div.service-work-seperator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0px;
+  color: white;
   background-color: black;
+  border-style: dotted none;
+  border-width: 3px;
+  border-color: #b50303;
+}
+
+main div.service-work-seperator div.quote {
+  font-size: 0.8rem;
+  padding: 0px 0px 5px 0px;
+}
+
+main div.service-work-seperator div.author {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+main div.corp-section {
+  min-height: 100vh;
+  height: auto;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, black), to(#1b1b1b));
+  background: linear-gradient(to bottom, black 10%, #1b1b1b);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main div.corp-section div.corp-intro {
+  margin-top: 100px;
+  width: 80%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+main div.corp-section div.corp-intro p.title {
+  color: #b50303;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: translate(20px, -20px);
+          transform: translate(20px, -20px);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+main div.corp-section div.corps {
+  margin-top: 30px;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main div.corp-section div.corps div.corp {
+  width: 200px;
+  margin: 0px 20px;
+}
+
+main div.corp-section div.corps div.corp img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 700px) {
+  div.services-section div.services div.services-intro {
+    margin: 0px 50px 0px 0px !important;
+  }
+  div.services-section div.services div.services-options ul {
+    margin: 0px 50px 0px 0px !important;
+  }
+  div.work-section div.work-intro a {
+    background-color: #b50303;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 60px;
+    font-size: 0.75rem;
+    padding: 10px 40px;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -516,31 +653,12 @@ main div.corp-section {
   main {
     margin-top: -15px;
   }
-  main div.header-seperator {
-    background-color: #b50303;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 50px 0px;
-    color: white;
-  }
-  main div.header-seperator div.quote {
-    font-size: 0.8rem;
-    padding: 0px 0px 5px 0px;
-  }
-  main div.header-seperator div.author {
-    font-size: 0.7rem;
-  }
   main div.services-section {
-    background-image: -webkit-gradient(linear, right top, left top, color-stop(20%, black), to(rgba(0, 0, 0, 0.8))), url("../../files/services.jpg");
-    background-image: linear-gradient(to left, black 20%, rgba(0, 0, 0, 0.8)), url("../../files/services.jpg");
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url("../../files/services.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../../files/services.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -582,6 +700,61 @@ main div.corp-section {
   main div.services-section div.laptop {
     display: none;
   }
+  main div.work-section {
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 100px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url("../../files/services.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../../files/services.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main div.work-section > div {
+    width: 100%;
+  }
+  main div.work-section div.work-intro {
+    margin-top: 100px;
+  }
+  main div.work-section div.work-intro p.title {
+    font-size: 1.2rem !important;
+  }
+  main div.work-section div.work-intro a.all-works-desktop {
+    display: none;
+  }
+  main div.work-section div.works {
+    height: auto;
+  }
+  main div.work-section div.works div.work {
+    width: 60%;
+    margin: 10px 0px;
+  }
+  main div.work-section div.top-darken, main div.work-section div.bottom-darken {
+    display: none;
+  }
+  main div.work-section a.all-works-mobile {
+    display: inline-block;
+    padding: 15px 0px;
+    text-align: center;
+    width: 60%;
+  }
+  main div.corp-section {
+    padding-bottom: 100px;
+  }
+  main div.corp-section div.corp-intro {
+    font-size: 1.2rem !important;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -593,19 +766,9 @@ main div.corp-section {
     font-size: 0.7rem;
     position: static;
   }
-  main div.header-seperator {
+  main div.header-seperator, main div.service-work-seperator {
     text-align: center;
     padding: 50px 30px;
-    color: white;
-  }
-  main div.header-seperator div.quote {
-    font-size: 0.8rem;
-    padding: 0px 0px 5px 0px;
-  }
-  main div.header-seperator div.author {
-    font-size: 0.7rem;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.4);
   }
 }
 
@@ -664,19 +827,63 @@ nav button.navbar-button div {
   position: relative;
 }
 
-nav .navbar-button-clicked div.line1 {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+nav .navbar-button-clicked div {
+  margin-top: 20px !important;
 }
 
-nav .navbar-button-clicked div.line2 {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+nav div.navigator {
+  margin-top: 10vw;
+  width: 100%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-nav .navbar-button-clicked div.line3 {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+nav div.navigator div.navigator-container {
+  height: 350px;
+  width: 5%;
+  background-color: #171717;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 10px;
+}
+
+nav div.navigator div.navigator-container > div {
+  width: 10px;
+  height: 10px;
+  background-color: #670000;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-radius: 50%;
+}
+
+nav div.navigator div.navigator-container > div:hover {
+  width: 20px;
+  height: 20px;
+  background-color: #b50303 !important;
+  -webkit-box-shadow: 0px 0px 5px 5px #b50303;
+          box-shadow: 0px 0px 5px 5px #b50303;
 }
 
 div.menu {
@@ -727,12 +934,143 @@ div.menu div.options div.option a:hover {
   background-color: black;
 }
 
+footer {
+  width: 100%;
+  background-color: #b50303;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
+}
+
+footer div.social-media {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer div.social-media a {
+  font-size: 1rem;
+  color: white;
+}
+
+footer div.footer-quote {
+  width: 50%;
+  text-align: center;
+  color: white;
+}
+
+footer div.footer-quote div.quote {
+  font-size: 0.8rem;
+  padding: 0px 0px 5px 0px;
+}
+
+footer div.footer-quote div.author {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+footer div.footer-logo {
+  width: 20%;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.active {
+  width: 20px !important;
+  height: 20px !important;
+  background-color: #b50303 !important;
+  -webkit-box-shadow: 0px 0px 5px 5px #b50303;
+          box-shadow: 0px 0px 5px 5px #b50303;
+}
+
 @media only screen and (max-width: 700px) {
   nav {
     background-color: transparent;
   }
-  nav svg {
+  nav div.navigator {
     display: none;
+  }
+  footer {
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    background-color: #b50303;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 50px;
+  }
+  footer > div {
+    margin-top: 30px;
+  }
+  footer div.social-media {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer div.social-media a {
+    font-size: 1.5rem;
+    color: white;
+  }
+  footer div.footer-quote {
+    width: 100%;
+  }
+  footer div.footer-quote div.quote {
+    font-size: 0.8rem;
+    padding: 0px 0px 5px 0px;
+  }
+  footer div.footer-quote div.author {
+    font-size: 0.7rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.4);
+  }
+  footer div.footer-logo {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
   }
 }
 /*# sourceMappingURL=main.css.map */

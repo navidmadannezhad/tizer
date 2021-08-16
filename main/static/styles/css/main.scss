@@ -50,15 +50,40 @@ nav{
     }
 
     .navbar-button-clicked{
-        div.line1{
-            transform: rotate(90deg);
+        div{
+            margin-top: 20px !important;
         }
-        div.line2{
-            transform: rotate(90deg);
+    }
+
+    div.navigator{
+        margin-top: 10vw;
+        width: 100%;
+        height: 400px;
+        @include flex-center-center();
+
+        div.navigator-container{
+            height: 350px;
+            width: 5%;
+            background-color: $heavyDark;
+            @include flex-column-center();
+            justify-content: space-around;
+            border-radius: 10px;
+
+            & > div{
+                width: 10px;
+                height: 10px;
+                background-color: $darker_bloody_red;
+                transition: all 0.5s;
+                border-radius: 50%;
+                &:hover{
+                    width: 20px;
+                    height: 20px;
+                    background-color: $bloody_red !important;
+                    box-shadow: 0px 0px 5px 5px $bloody_red;
+                }
+            }
         }
-        div.line3{
-            transform: rotate(90deg);
-        }
+
     }
 }
 
@@ -93,12 +118,94 @@ div.menu{
     }
 }
 
+footer{
+    width: 100%;
+    background-color: $bloody_red;
+    @include flex-row-between-center();
+    padding: 50px;
+    div.social-media{
+        width: 20%;
+        @include flex-row-around-center();
+        a{
+            font-size: $font3;
+            color: white;
+        }
+    } 
+    div.footer-quote{
+        width: 50%;
+        text-align: center;
+        color: white;
+        div.quote{
+            font-size: $font4;
+            padding: 0px 0px 5px 0px;
+        }
+        div.author{
+            font-size: $font4_responsive;
+            font-style: italic;
+            color: rgba(255,255,255,0.4);
+        }
+    }
+    div.footer-logo{
+        width: 20%;
+        text-align: center;
+        color: white;
+        font-size: $font3;
+        font-weight: bold;
+    }
+}
+
+.active{
+    width: 20px !important;
+    height: 20px !important;
+    background-color: $bloody_red !important;
+    box-shadow: 0px 0px 5px 5px $bloody_red;
+}
+
 // Responsive codes
 @media only screen and (max-width:700px){
     nav{
         background-color: transparent;
-        svg{
+        div.navigator{
             display: none;
+        }
+    }
+
+    footer{
+        min-height: 100vh;
+        height: auto;
+        width: 100%;
+        background-color: $bloody_red;
+        @include flex-column-center();
+        padding: 50px;
+        & > div{
+            margin-top: 30px;
+        }
+        div.social-media{
+            width: 70%;
+            @include flex-row-around-center();
+            a{
+                font-size: $font2;
+                color: white;
+            }
+        } 
+        div.footer-quote{
+            width: 100%;
+            div.quote{
+                font-size: $font4;
+                padding: 0px 0px 5px 0px;
+            }
+            div.author{
+                font-size: $font4_responsive;
+                font-style: italic;
+                color: rgba(255,255,255,0.4);
+            }
+        }
+        div.footer-logo{
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: $font3;
+            font-weight: bold;
         }
     }
 }

@@ -1,4 +1,6 @@
 $bloody_red: #b50303;
+$darker_bloody_red: #670000;
+$heavyDark: #171717;
 $darkForeGround: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
 
 @function background($direction){
@@ -29,4 +31,41 @@ $darkForeGround: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
     &::-webkit-scrollbar {
         display: none;
     }
+}
+
+@mixin all-works-button{
+    background-color: $bloody_red;
+    margin-top: 10px;
+    @include anchor();
+    border-radius: 10px;
+    padding: 15px 60px;
+    font-size: 0.75rem;
+}
+
+
+@mixin quote-seperator{
+    @include flex-column-center();
+    padding: 50px 0px;
+    color: white;
+    div.quote{
+        font-size: $font4;
+        padding: 0px 0px 5px 0px;
+    }
+    div.author{
+        font-size: $font4_responsive;
+        font-style: italic;
+        color: rgba(255,255,255,0.4);
+    }
+}
+
+@mixin quote-seperator-responsive{
+    text-align: center;
+    padding: 50px 30px;
+}
+
+@mixin fadeWhenNotScrolled($x, $y){
+    color: $bloody_red;
+    filter: blur(5px);
+    transform: translate($x, $y);
+    transition: all 2s;
 }

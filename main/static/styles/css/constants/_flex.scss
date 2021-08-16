@@ -30,6 +30,12 @@
     align-items: center;
 }
 
+@mixin flex-row-around-center{
+    @include flex-row();
+    justify-content: space-around;
+    align-items: center;
+}
+
 @mixin flex-row-reverse-between-center{
     @include flex-row-reverse();
     justify-content: space-between;

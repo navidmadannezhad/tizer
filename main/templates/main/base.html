@@ -10,40 +10,51 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="{% static 'styles/css/main.css' %}">
 </head>
+
+
 <body>
+
+  <div class="page-before-load">
+
+  </div>
+
   <nav id="navbar">
       <button class="navbar-button">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
       </button>
+      {% if request.path == "/" %}
       <div class="navigator">
-          <svg width="50" height="500">   
-              <line x1="25" y1="200" x2="25" y2="450"
-              style="stroke-width: 2; stroke: rgb(184, 184, 184);"/>
-          </svg>
+          <div class="navigator-container">
+            <div class="home-navigator navigator-button"></div>
+            <div class="services-navigator navigator-button"></div>
+            <div class="work-navigator navigator-button"></div>
+            <div class="corp-navigator navigator-button"></div>
+          </div>
       </div>
+      {% endif %}
   </nav>
 
   <div class="menu">
     <div class="options">
       <div class="option">
-        <a href="">
+        <a href="{% url 'main:home' %}">
          خانه
         </a>
      </div>
      <div class="option">
-          <a href="">
+          <a href="{% url 'main:about' %}">
           درباره ما
           </a>
       </div>
       <div class="option">
-        <a href="">
+        <a href="{% url 'main:work' %}">
         پروژه ها
         </a>
       </div>
       <div class="option">
-        <a href="">
+        <a href="{% url 'main:contact' %}">
         تماس با ما
         </a>
       </div>
@@ -55,9 +66,33 @@
     {% endblock %}
 
 
+
+    <footer>
+      <div class="social-media">
+        <a href="">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href=""><i class="fab fa-telegram-plane"></i></a>
+        <a href=""><i class="fab fa-whatsapp"></i></a>
+        <a href=""><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <div class="footer-quote">
+          <div class="quote">تبلیغات خوب، باعث باهوش به نظر رسیدن کسب و کار است، اما تبلیغات عالی، باعث می‌شود مشتری حس هوشمندی داشته باشد!</div>
+          <div class="author">"جو چرنوو - متخصص مارکتینگ در Pendo.io"</div>
+      </div>
+      <div class="footer-logo">
+          TIZER
+      </div>
+    </footer>
+
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script src="{% static 'styles/js/home.js' %}"></script>
+    {% if request.path == "/" %}
+      <script src="{% static 'styles/js/home.js' %}"></script>
+    {% endif %}
+    <script src="{% static 'styles/js/base.js' %}"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/7b0dcc43a4.js" crossorigin="anonymous"></script>
     <script>
       AOS.init();
     </script>

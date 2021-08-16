@@ -28,8 +28,10 @@
 
     <div class="services-section">
         <div class="services">
-            <div class="services-intro" data-aos="fade-left" data-aos-duration="2000">
-                خدماتی که به شما ارائه می‌دیم...
+            <div class="services-intro intro">
+                <p class="title">
+                    خدماتی که به شما ارائه می‌دیم...
+                </p>
             </div>
             <div class="services-options" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="1000" data-aos-once="true">
                 <ul>
@@ -52,13 +54,22 @@
         </div>
     </div>
 
+    <div class="service-work-seperator">
+        <div class="quote">
+            اگر تصاویر هزاران کلمه ناگفته در خود دارند، ویدیو ها مانند یک کتابخانه هستند!
+        </div>
+        <div class="author">
+           "سرینیواس نارایانان - سرپرست بخش هوش مصنوعی فیسبوک"
+        </div>
+    </div>
+
     <div class="work-section">
-        <div class="work-intro">
+        <div class="work-intro intro">
             <p class="title" data-aos="fade" data-aos-duration="2000" data-aos-once="true">چندی از نمونه کار ها...</p>
             <p class="message" data-aos="fade" data-aos-duration="2000" data-aos-once="true" data-aos-delay="1000">
                 تیم تیزر همواره سعی بر ارائه بهترین تیزرهای تبلیغاتی، جهت موفقیت کسب و کار شما در هر کمپین تبلیغاتی‌ دارد.
             </p>
-            <a href="#" data-aos="fade" data-aos-duration="2000" data-aos-once="true" data-aos-delay="1000">
+            <a href="{% url 'main:work' %}" class="all-works-desktop" data-aos="fade" data-aos-duration="2000" data-aos-once="true" data-aos-delay="1000">
                 مشاهده تمام نمونه کار ها
             </a>
         </div>
@@ -75,11 +86,45 @@
             </div>
         </div>
         <div class="bottom-darken"></div>
+        <a href="{% url 'main:work' %}" class="all-works-mobile" data-aos="fade" data-aos-duration="2000" data-aos-once="true"">
+                مشاهده تمام نمونه کارها
+        </a>
     </div>
 
     <div class="corp-section">
-
+        <div class="corp-intro intro">
+            <p class="title">
+                همکاری‌های ما
+            </p>
+        </div>
+        <div class="corps">
+            <div class="corp">
+                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
+            </div>
+            <div class="corp">
+                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
+            </div>
+            <div class="corp">
+                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
+            </div>
+            <div class="corp">
+                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
+            </div>
+            <div class="corp">
+                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
+            </div>
+            <div class="corp">
+                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
+            </div>
+            <div class="corp">
+                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
+            </div>
+            <div class="corp">
+                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
+            </div>
+        </div>
     </div>
 
 </main>
+
 {% endblock %}

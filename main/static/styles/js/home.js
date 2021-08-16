@@ -69,11 +69,11 @@ function makeOtherButtonsInactive(){
 }
 
 function activateNavigatorButton(node){
-    node.classList.add('active');
+    node.classList.add('navigator-active');
 }
 
 function inactiveNavigatorButton(node){
-    node.classList.remove('active');
+    node.classList.remove('navigator-active');
 }
 
 document.addEventListener('scroll', function(event){

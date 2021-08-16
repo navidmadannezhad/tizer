@@ -40,7 +40,7 @@ header{
     }
 }
 
-main{
+main.home-page{
     margin-top: -15px;
     div.header-seperator{
         @include quote-seperator();
@@ -137,6 +137,7 @@ main{
             height: 100%;
             position: relative;
             @include flex-column-center();
+            justify-content: center;
             overflow-y: auto;
 
             div.work{
@@ -276,7 +277,7 @@ main{
         }
     }
 
-    main{
+    main.home-page{
         margin-top: -15px;
         div.services-section{
             background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url('../../files/services.jpg');
@@ -392,7 +393,7 @@ main{
         }
     }
 
-    main{
+    main.home-page{
         div.header-seperator, div.service-work-seperator{
             @include quote-seperator-responsive();
         }

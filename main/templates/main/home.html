@@ -1,5 +1,9 @@
 {% extends './base.html' %}
 
+{% block 'title' %}
+خانه
+{% endblock %}
+
 {% block 'content' %}
 <header class="section">
     <video autoplay muted loop id="myVideo">
@@ -16,7 +20,7 @@
 </header>
 
 
-<main>
+<main class="home-page">
     <div class="header-seperator">
         <div class="quote">
             اگر تصاویر هزاران کلمه ناگفته در خود دارند، ویدیو ها مانند یک کتابخانه هستند!
@@ -75,15 +79,25 @@
         </div>
         <div class="top-darken"></div>
         <div class="works keep-scrolling">
-            <div class="work">
-                <div id="79039686089"><script type="text/JavaScript" src="https://www.aparat.com/embed/0klxC?data[rnddiv]=79039686089&data[responsive]=yes"></script></div>
-            </div>
-            <div class="work">
-                <div id="10080156393"><script type="text/JavaScript" src="https://www.aparat.com/embed/NO5si?data[rnddiv]=10080156393&data[responsive]=yes"></script></div>
-            </div>
-            <div class="work">
-                <div id="87668251956"><script type="text/JavaScript" src="https://www.aparat.com/embed/i2rXT?data[rnddiv]=87668251956&data[responsive]=yes"></script></div>
-            </div>
+
+            {% if True %}
+                <div class="work">
+                    <div id="79039686089"><script type="text/JavaScript" src="https://www.aparat.com/embed/0klxC?data[rnddiv]=79039686089&data[responsive]=yes"></script></div>
+                </div>
+                <div class="work">
+                    <div id="10080156393"><script type="text/JavaScript" src="https://www.aparat.com/embed/NO5si?data[rnddiv]=10080156393&data[responsive]=yes"></script></div>
+                </div>
+                <div class="work">
+                    <div id="87668251956"><script type="text/JavaScript" src="https://www.aparat.com/embed/i2rXT?data[rnddiv]=87668251956&data[responsive]=yes"></script></div>
+                </div>
+            {% else %}
+                <p class="not-found-message">
+                    نمونه کار‌ها به زودی به روزرسانی می‌شوند
+                </p>
+            {% endif %}
+
+
+            
         </div>
         <div class="bottom-darken"></div>
         <a href="{% url 'main:work' %}" class="all-works-mobile" data-aos="fade" data-aos-duration="2000" data-aos-once="true"">

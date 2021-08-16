@@ -39,22 +39,22 @@
   <div class="menu">
     <div class="options">
       <div class="option">
-        <a href="{% url 'main:home' %}">
+        <a href="{% url 'main:home' %}" class="{% if request.path == '/' %}menu-active{% endif %}">
          خانه
         </a>
      </div>
      <div class="option">
-          <a href="{% url 'main:about' %}">
+          <a href="{% url 'main:about' %}" class="{% if request.path == '/about/' %}menu-active{% endif %}">
           درباره ما
           </a>
       </div>
       <div class="option">
-        <a href="{% url 'main:work' %}">
+        <a href="{% url 'main:work' %}" class="{% if request.path == '/work/' %}menu-active{% endif %}">
         پروژه ها
         </a>
       </div>
       <div class="option">
-        <a href="{% url 'main:contact' %}">
+        <a href="{% url 'main:contact' %}" class="{% if request.path == '/contact/' %}menu-active{% endif %}">
         تماس با ما
         </a>
       </div>

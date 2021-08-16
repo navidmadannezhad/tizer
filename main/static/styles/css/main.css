@@ -218,16 +218,16 @@ header div.header-introduction div.content h1:hover {
 }
 
 header div.header-introduction div.content p {
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   position: relative;
   bottom: 30px;
 }
 
-main {
+main.home-page {
   margin-top: -15px;
 }
 
-main div.header-seperator {
+main.home-page div.header-seperator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,18 +243,18 @@ main div.header-seperator {
   background-color: #b50303;
 }
 
-main div.header-seperator div.quote {
-  font-size: 0.8rem;
+main.home-page div.header-seperator div.quote {
+  font-size: 0.65rem;
   padding: 0px 0px 5px 0px;
 }
 
-main div.header-seperator div.author {
+main.home-page div.header-seperator div.author {
   font-size: 0.7rem;
   font-style: italic;
   color: rgba(255, 255, 255, 0.4);
 }
 
-main div.services-section {
+main.home-page div.services-section {
   width: 100%;
   min-height: 100vh;
   height: auto;
@@ -276,15 +276,15 @@ main div.services-section {
   position: relative;
 }
 
-main div.services-section > div {
+main.home-page div.services-section > div {
   width: 50%;
 }
 
-main div.services-section div.services {
+main.home-page div.services-section div.services {
   color: white;
 }
 
-main div.services-section div.services div.services-intro {
+main.home-page div.services-section div.services div.services-intro {
   margin: 0px 100px 0px 0px;
   font-size: 1.5rem;
   font-weight: bold;
@@ -297,18 +297,18 @@ main div.services-section div.services div.services-intro {
   transition: all 2s;
 }
 
-main div.services-section div.services div.services-options ul {
+main.home-page div.services-section div.services div.services-options ul {
   margin: 0px 100px 0px 0px;
   list-style: none;
 }
 
-main div.services-section div.services div.services-options ul li {
-  font-size: 0.8rem;
+main.home-page div.services-section div.services div.services-options ul li {
+  font-size: 0.65rem;
   margin: 30px 50px 0px 0px;
   color: #b3b3b3;
 }
 
-main div.services-section div.services div.services-options ul li::before {
+main.home-page div.services-section div.services div.services-options ul li::before {
   content: "\2022";
   color: #b50303;
   font-weight: bold;
@@ -316,7 +316,7 @@ main div.services-section div.services div.services-options ul li::before {
   width: 1em;
 }
 
-main div.services-section div.laptop {
+main.home-page div.services-section div.laptop {
   height: 100%;
   position: relative;
   display: -webkit-box;
@@ -334,7 +334,7 @@ main div.services-section div.laptop {
           align-items: center;
 }
 
-main div.services-section div.laptop div.screen {
+main.home-page div.services-section div.laptop div.screen {
   position: absolute;
   width: 37%;
   padding-top: 23%;
@@ -343,11 +343,11 @@ main div.services-section div.laptop div.screen {
   animation: tv 0.25s infinite alternate-reverse;
 }
 
-main div.services-section div.laptop img {
+main.home-page div.services-section div.laptop img {
   width: 50%;
 }
 
-main div.work-section {
+main.home-page div.work-section {
   height: 100vh;
   position: relative;
   background-size: cover;
@@ -370,11 +370,11 @@ main div.work-section {
           align-items: center;
 }
 
-main div.work-section > div {
+main.home-page div.work-section > div {
   width: 50%;
 }
 
-main div.work-section div.work-intro {
+main.home-page div.work-section div.work-intro {
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -389,7 +389,7 @@ main div.work-section div.work-intro {
   text-align: center;
 }
 
-main div.work-section div.work-intro p.title {
+main.home-page div.work-section div.work-intro p.title {
   font-size: 1.5rem;
   font-weight: bold;
   color: #b50303;
@@ -401,13 +401,13 @@ main div.work-section div.work-intro p.title {
   transition: all 2s;
 }
 
-main div.work-section div.work-intro p.message {
-  font-size: 0.8rem;
+main.home-page div.work-section div.work-intro p.message {
+  font-size: 0.65rem;
   color: #b3b3b3;
   padding: 50px 70px;
 }
 
-main div.work-section div.work-intro a {
+main.home-page div.work-section div.work-intro a {
   background-color: #b50303;
   margin-top: 10px;
   text-decoration: none;
@@ -418,7 +418,7 @@ main div.work-section div.work-intro a {
   font-size: 0.75rem;
 }
 
-main div.work-section div.works {
+main.home-page div.work-section div.works {
   height: 100%;
   position: relative;
   display: -webkit-box;
@@ -431,16 +431,19 @@ main div.work-section div.works {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow-y: auto;
 }
 
-main div.work-section div.works div.work {
+main.home-page div.work-section div.works div.work {
   width: 60%;
   margin: 75px 0px;
   border: none;
 }
 
-main div.work-section div.top-darken, main div.work-section div.bottom-darken {
+main.home-page div.work-section div.top-darken, main.home-page div.work-section div.bottom-darken {
   position: absolute;
   width: 100%;
   padding-top: 10%;
@@ -448,19 +451,19 @@ main div.work-section div.top-darken, main div.work-section div.bottom-darken {
   z-index: 100;
 }
 
-main div.work-section div.top-darken {
+main.home-page div.work-section div.top-darken {
   top: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
 }
 
-main div.work-section div.bottom-darken {
+main.home-page div.work-section div.bottom-darken {
   bottom: 0;
   background: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
 }
 
-main div.work-section .keep-scrolling {
+main.home-page div.work-section .keep-scrolling {
   overflow-y: scroll;
   /* Add the ability to scroll y axis*/
   /* Hide scrollbar for IE, Edge and Firefox */
@@ -471,11 +474,11 @@ main div.work-section .keep-scrolling {
   /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
-main div.work-section .keep-scrolling::-webkit-scrollbar {
+main.home-page div.work-section .keep-scrolling::-webkit-scrollbar {
   display: none;
 }
 
-main div.work-section a.all-works-mobile {
+main.home-page div.work-section a.all-works-mobile {
   background-color: #b50303;
   margin-top: 10px;
   text-decoration: none;
@@ -488,7 +491,7 @@ main div.work-section a.all-works-mobile {
   display: none;
 }
 
-main div.service-work-seperator {
+main.home-page div.service-work-seperator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -507,18 +510,18 @@ main div.service-work-seperator {
   border-color: #b50303;
 }
 
-main div.service-work-seperator div.quote {
-  font-size: 0.8rem;
+main.home-page div.service-work-seperator div.quote {
+  font-size: 0.65rem;
   padding: 0px 0px 5px 0px;
 }
 
-main div.service-work-seperator div.author {
+main.home-page div.service-work-seperator div.author {
   font-size: 0.7rem;
   font-style: italic;
   color: rgba(255, 255, 255, 0.4);
 }
 
-main div.corp-section {
+main.home-page div.corp-section {
   min-height: 100vh;
   height: auto;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, black), to(#1b1b1b));
@@ -535,7 +538,7 @@ main div.corp-section {
           align-items: center;
 }
 
-main div.corp-section div.corp-intro {
+main.home-page div.corp-section div.corp-intro {
   margin-top: 100px;
   width: 80%;
   font-size: 1.5rem;
@@ -543,7 +546,7 @@ main div.corp-section div.corp-intro {
   color: white;
 }
 
-main div.corp-section div.corp-intro p.title {
+main.home-page div.corp-section div.corp-intro p.title {
   color: #b50303;
   -webkit-filter: blur(5px);
           filter: blur(5px);
@@ -553,7 +556,7 @@ main div.corp-section div.corp-intro p.title {
   transition: all 2s;
 }
 
-main div.corp-section div.corps {
+main.home-page div.corp-section div.corps {
   margin-top: 30px;
   width: 80%;
   display: -webkit-box;
@@ -573,12 +576,12 @@ main div.corp-section div.corps {
       flex-wrap: wrap;
 }
 
-main div.corp-section div.corps div.corp {
+main.home-page div.corp-section div.corps div.corp {
   width: 200px;
   margin: 0px 20px;
 }
 
-main div.corp-section div.corps div.corp img {
+main.home-page div.corp-section div.corps div.corp img {
   width: 100%;
 }
 
@@ -650,10 +653,10 @@ main div.corp-section div.corps div.corp img {
             align-items: center;
     position: static;
   }
-  main {
+  main.home-page {
     margin-top: -15px;
   }
-  main div.services-section {
+  main.home-page div.services-section {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url("../../files/services.jpg");
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../../files/services.jpg");
     background-size: cover;
@@ -663,15 +666,15 @@ main div.corp-section div.corps div.corp img {
         -ms-flex-align: center;
             align-items: center;
   }
-  main div.services-section div.services {
+  main.home-page div.services-section div.services {
     width: 100%;
     text-align: center;
   }
-  main div.services-section div.services div.services-intro {
+  main.home-page div.services-section div.services div.services-intro {
     margin: 0px 0px;
     font-size: 1.2rem !important;
   }
-  main div.services-section div.services div.services-options ul {
+  main.home-page div.services-section div.services div.services-options ul {
     margin: 0px 0px 0px 0px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -684,23 +687,23 @@ main div.corp-section div.corps div.corp img {
         -ms-flex-align: center;
             align-items: center;
   }
-  main div.services-section div.services div.services-options ul li, main div.services-section div.services div.services-options ul div {
+  main.home-page div.services-section div.services div.services-options ul li, main.home-page div.services-section div.services div.services-options ul div {
     font-size: 0.7rem !important;
     margin: 15px 0px 0px 0px;
   }
-  main div.services-section div.services div.services-options ul li::before, main div.services-section div.services div.services-options ul div::before {
+  main.home-page div.services-section div.services div.services-options ul li::before, main.home-page div.services-section div.services div.services-options ul div::before {
     content: "";
   }
-  main div.services-section div.services div.services-options ul div.seperator {
+  main.home-page div.services-section div.services div.services-options ul div.seperator {
     width: 30px;
     height: 5px;
     border-radius: 5px;
     background-color: #b50303;
   }
-  main div.services-section div.laptop {
+  main.home-page div.services-section div.laptop {
     display: none;
   }
-  main div.work-section {
+  main.home-page div.work-section {
     min-height: 100vh;
     height: auto;
     padding-bottom: 100px;
@@ -720,38 +723,38 @@ main div.corp-section div.corps div.corp img {
         -ms-flex-align: center;
             align-items: center;
   }
-  main div.work-section > div {
+  main.home-page div.work-section > div {
     width: 100%;
   }
-  main div.work-section div.work-intro {
+  main.home-page div.work-section div.work-intro {
     margin-top: 100px;
   }
-  main div.work-section div.work-intro p.title {
+  main.home-page div.work-section div.work-intro p.title {
     font-size: 1.2rem !important;
   }
-  main div.work-section div.work-intro a.all-works-desktop {
+  main.home-page div.work-section div.work-intro a.all-works-desktop {
     display: none;
   }
-  main div.work-section div.works {
+  main.home-page div.work-section div.works {
     height: auto;
   }
-  main div.work-section div.works div.work {
+  main.home-page div.work-section div.works div.work {
     width: 60%;
     margin: 10px 0px;
   }
-  main div.work-section div.top-darken, main div.work-section div.bottom-darken {
+  main.home-page div.work-section div.top-darken, main.home-page div.work-section div.bottom-darken {
     display: none;
   }
-  main div.work-section a.all-works-mobile {
+  main.home-page div.work-section a.all-works-mobile {
     display: inline-block;
     padding: 15px 0px;
     text-align: center;
     width: 60%;
   }
-  main div.corp-section {
+  main.home-page div.corp-section {
     padding-bottom: 100px;
   }
-  main div.corp-section div.corp-intro {
+  main.home-page div.corp-section div.corp-intro {
     font-size: 1.2rem !important;
     text-align: center;
   }
@@ -766,9 +769,110 @@ main div.corp-section div.corps div.corp img {
     font-size: 0.7rem;
     position: static;
   }
-  main div.header-seperator, main div.service-work-seperator {
+  main.home-page div.header-seperator, main.home-page div.service-work-seperator {
     text-align: center;
     padding: 50px 30px;
+  }
+}
+
+main.work-page div.work-section {
+  min-height: 100vh;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, black), to(rgba(0, 0, 0, 0.4))), -webkit-gradient(linear, left bottom, left top, color-stop(20%, black), to(rgba(0, 0, 0, 0.1))), url("../../files/services.jpg");
+  background-image: linear-gradient(to right, black 20%, rgba(0, 0, 0, 0.4)), linear-gradient(to top, black 20%, rgba(0, 0, 0, 0.1)), url("../../files/services.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.work-page div.work-section div.works {
+  width: 80%;
+  margin: 100px 0px;
+}
+
+main.work-page div.work-section div.works div.work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px dotted #b50303;
+  padding: 50px 0px;
+}
+
+main.work-page div.work-section div.works div.work div.video {
+  width: 30%;
+}
+
+main.work-page div.work-section div.works div.work div.video div {
+  width: 100%;
+}
+
+main.work-page div.work-section div.works div.work div.details {
+  width: 70%;
+  color: white;
+  padding: 0px 50px 0px 0px;
+}
+
+main.work-page div.work-section div.works div.work div.details p.title {
+  font-size: 1.5rem;
+  padding: 20px 0px;
+  color: #626262;
+  font-weight: bold;
+}
+
+main.work-page div.work-section div.works div.work div.details p.description {
+  font-size: 0.65rem;
+}
+
+@media only screen and (max-width: 950px) {
+  main.work-page div.work-section div.works div.work {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main.work-page div.work-section div.works div.work div.video {
+    width: 100%;
+  }
+  main.work-page div.work-section div.works div.work div.video div {
+    width: 100%;
+  }
+  main.work-page div.work-section div.works div.work div.details {
+    width: 100%;
+    color: white;
+    padding: 0px 0px 0px 0px;
+  }
+  main.work-page div.work-section div.works div.work div.details p.title {
+    font-size: 1.2rem;
+    padding: 20px 0px;
+  }
+  main.work-page div.work-section div.works div.work div.details p.description {
+    font-size: 0.7rem;
   }
 }
 
@@ -788,6 +892,10 @@ html, body {
 
 body {
   overflow-x: hidden;
+}
+
+p.not-found-message {
+  color: white;
 }
 
 nav {
@@ -981,7 +1089,7 @@ footer div.footer-quote {
 }
 
 footer div.footer-quote div.quote {
-  font-size: 0.8rem;
+  font-size: 0.65rem;
   padding: 0px 0px 5px 0px;
 }
 
@@ -999,12 +1107,16 @@ footer div.footer-logo {
   font-weight: bold;
 }
 
-.active {
+.navigator-active {
   width: 20px !important;
   height: 20px !important;
   background-color: #b50303 !important;
   -webkit-box-shadow: 0px 0px 5px 5px #b50303;
           box-shadow: 0px 0px 5px 5px #b50303;
+}
+
+.menu-active {
+  color: #b50303 !important;
 }
 
 @media only screen and (max-width: 700px) {
@@ -1057,7 +1169,7 @@ footer div.footer-logo {
     width: 100%;
   }
   footer div.footer-quote div.quote {
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     padding: 0px 0px 5px 0px;
   }
   footer div.footer-quote div.author {

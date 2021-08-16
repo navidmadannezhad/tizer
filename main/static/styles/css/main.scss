@@ -5,6 +5,7 @@
 @import 'constants/animations';
 
 @import 'home';
+@import 'work';
 
 *{
     padding: 0px;
@@ -22,6 +23,10 @@ html, body{
 
 body{
     overflow-x: hidden;
+}
+
+p.not-found-message{
+    color: white;
 }
 
 nav{
@@ -154,11 +159,15 @@ footer{
     }
 }
 
-.active{
+.navigator-active{
     width: 20px !important;
     height: 20px !important;
     background-color: $bloody_red !important;
     box-shadow: 0px 0px 5px 5px $bloody_red;
+}
+
+.menu-active{
+    color: $bloody_red !important;
 }
 
 // Responsive codes

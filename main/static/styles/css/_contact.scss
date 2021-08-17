@@ -1,0 +1,148 @@
+main.contact-page{
+    @include notLandingPageImagedBackground(to top);
+    @include flex-column-center();
+
+    div.contact-information-intro, div.rapid-contact-intro, div.address-info{
+        color: white;
+        font-size: $font3;
+        width: 100%;
+    }
+
+    div.contact-choices{
+        width: 80%;
+        height: auto;
+        padding: 100px 0px;
+        @include flex-row-between-center();
+        align-items: flex-start;
+        & > div{
+            width: 40%;
+        }
+
+        div.rapid-contact{
+            @include flex-column-center();
+            input, textarea{
+                @include input();
+                width: 100%;
+            }
+            div.submit{
+                width: 100%;
+                @include flex-row-between-center();
+
+                div.captcha, input[type="submit"]{
+                    width: 40%;
+                }
+            }
+        }
+
+        div.contact-information{
+            @include flex-column-center();
+
+            div.information{
+                width: 100%;
+                div{
+                    margin-top: 15px;
+                    span{
+                        font-size: $font4;
+                        color: white;
+                    }
+                    &.social-media{
+                        color: white;
+                        & span:nth-of-type(2) a{
+                            @include anchor();
+                            font-size: $font3;
+                            padding: 0px 10px 0px 0px;
+                            position: relative;
+                            top: 6px;
+                        }
+                    }
+                    & span:first-of-type{
+                        color: rgb(125, 125, 125);
+                    }
+                }
+            }
+        }
+    }
+
+    div.address{
+        width: 80%;
+        div.address-info{
+            padding: 0px 0px 30px 0px;
+        }
+        div.map{
+            width: 100%;
+            iframe{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+// RESPONSIVE CODES ---------------------------------------------------
+@media only screen and (max-width: 850px){
+    main.contact-page{
+    
+        div.contact-information-intro, div.rapid-contact-intro, div.address-info{
+            text-align: center;
+        }
+    
+        div.contact-choices{
+            @include flex-column-center();
+            & > div{
+                width: 100%;
+            }
+    
+            div.rapid-contact{
+                @include flex-column-center();
+                input, textarea{
+                    @include input();
+                    width: 100%;
+                }
+                textarea{
+                    height: 200px;
+                }
+                div.submit{
+                    @include flex-column-center();
+                    div.captcha, input[type="submit"]{
+                        width: 100%;
+                    }
+                }
+            }
+    
+            div.contact-information{
+                margin-top: 100px;
+                @include flex-column-center();
+    
+                div.information{
+                    div{
+                        margin-top: 15px;
+                        @include flex-column-center();
+                        span{
+                            font-size: $font4_responsive;
+                            color: white;
+                        }
+                        &.social-media{
+                            color: white;
+                            & span:nth-of-type(2) a{
+                                @include anchor();
+                                font-size: $font3_responsive;
+                                padding: 0px 10px 0px 0px;
+                                position: relative;
+                                top: 6px;
+                            }
+                        }
+                        & span:first-of-type{
+                            color: rgb(125, 125, 125);
+                            padding: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        div.address{
+            width: 100%;
+        }
+    }
+}

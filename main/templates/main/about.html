@@ -1,11 +1,127 @@
 {% extends './base.html' %}
 
+{% load static %}
+
 {% block 'title' %}
 درباره ما
 {% endblock %}
 
 {% block 'content' %}
-<h1>
-    About us
-</h1>
+
+<header class="about-page">
+    <p class="intro">
+        درباره ما
+    </p>
+</header>
+
+<main class="about-page">
+
+    <div class="about-section">
+        <div class="about">
+            <div class="description" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="1000" data-aos-once="true">
+                م ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد
+            </div>
+        </div>
+        <div class="tv">
+            <div class="screen"></div>
+            <img src="{% static 'files/big-tv.png' %}" alt="">
+        </div>
+    </div>
+
+    <div class="service-work-seperator">
+        <div class="quote">
+            اگر تصاویر هزاران کلمه ناگفته در خود دارند، ویدیو ها مانند یک کتابخانه هستند!
+        </div>
+        <div class="author">
+           "سرینیواس نارایانان - سرپرست بخش هوش مصنوعی فیسبوک"
+        </div>
+    </div>
+
+    <div class="work-section">
+        <div class="work-intro intro">
+            <p class="title" data-aos="fade" data-aos-duration="2000" data-aos-once="true">چندی از نمونه کار ها...</p>
+            <p class="message" data-aos="fade" data-aos-duration="2000" data-aos-once="true" data-aos-delay="1000">
+                تیم تیزر همواره سعی بر ارائه بهترین تیزرهای تبلیغاتی، جهت موفقیت کسب و کار شما در هر کمپین تبلیغاتی‌ دارد.
+            </p>
+            <a href="{% url 'main:work' %}" class="all-works-desktop" data-aos="fade" data-aos-duration="2000" data-aos-once="true" data-aos-delay="1000">
+                مشاهده تمام نمونه کار ها
+            </a>
+        </div>
+        <div class="top-darken"></div>
+        <div class="works keep-scrolling">
+
+            {% if True %}
+                <div class="work">
+                    <div id="79039686089"><script type="text/JavaScript" src="https://www.aparat.com/embed/0klxC?data[rnddiv]=79039686089&data[responsive]=yes"></script></div>
+                </div>
+                <div class="work">
+                    <div id="10080156393"><script type="text/JavaScript" src="https://www.aparat.com/embed/NO5si?data[rnddiv]=10080156393&data[responsive]=yes"></script></div>
+                </div>
+                <div class="work">
+                    <div id="87668251956"><script type="text/JavaScript" src="https://www.aparat.com/embed/i2rXT?data[rnddiv]=87668251956&data[responsive]=yes"></script></div>
+                </div>
+            {% else %}
+                <p class="not-found-message">
+                    نمونه کار‌ها به زودی به روزرسانی می‌شوند
+                </p>
+            {% endif %}
+
+
+            
+        </div>
+        <div class="bottom-darken"></div>
+        <a href="{% url 'main:work' %}" class="all-works-mobile" data-aos="fade" data-aos-duration="2000" data-aos-once="true"">
+                مشاهده تمام نمونه کارها
+        </a>
+    </div>
+
+    <div class="team-section">
+        <div class="team-intro intro">
+            <p class="title">
+                 اعضای تیم
+            </p>
+        </div>
+        <div class="team-members">
+            <div class="member">
+                <img src="{% static 'files/jack.jpg' %}" alt="" class="member-image">
+                <p class="member-name">
+                    جک ما
+                </p>
+                <p class="member-about">
+                    انیماتور و سرپرست تیم
+                </p>
+            </div>
+            <div class="member">
+                <img src="{% static 'files/jack.jpg' %}" alt="" class="member-image">
+                <p class="member-name">
+                    جک ما
+                </p>
+                <p class="member-about">
+                    انیماتور و سرپرست تیم
+                </p>
+            </div>
+            <div class="member">
+                <img src="{% static 'files/jack.jpg' %}" alt="" class="member-image">
+                <p class="member-name">
+                    جک ما
+                </p>
+                <p class="member-about">
+                    انیماتور و سرپرست تیم
+                </p>
+            </div>
+            <div class="member">
+                <img src="{% static 'files/jack.jpg' %}" alt="" class="member-image">
+                <p class="member-name">
+                    جک ما
+                </p>
+                <p class="member-about">
+                    انیماتور و سرپرست تیم
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
 {% endblock %}

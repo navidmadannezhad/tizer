@@ -3,17 +3,6 @@ $darker_bloody_red: #670000;
 $heavyDark: #171717;
 $darkForeGround: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
 
-@function background($direction){
-    @return linear-gradient($direction, black 20%, rgba(0,0,0,0.4)), linear-gradient(to top, black 20%, rgba(0,0,0,0.1)),url('../../files/services.jpg');
-}
-
-@mixin imagedBackground($direction){
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-image: background($direction);
-}
-
 @mixin anchor(){
     text-decoration: none;
     color: white;

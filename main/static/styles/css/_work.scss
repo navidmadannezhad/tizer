@@ -3,7 +3,7 @@ main.work-page{
     div.work-section{
         min-height: 100vh;
         height: auto;
-        @include imagedBackground(to right);
+        @include notLandingPageImagedBackground(to right);
         @include flex-column-center();
 
         div.works{

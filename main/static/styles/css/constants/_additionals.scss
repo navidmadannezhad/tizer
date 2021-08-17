@@ -1,0 +1,33 @@
+@function notLandingPagebackground($direction){
+    @return linear-gradient($direction, black 20%, rgba(0,0,0,0.4)), linear-gradient(to top, black 20%, rgba(0,0,0,0.1)),url('../../files/about-page.jpg');
+}
+
+@mixin notLandingPageImagedBackground($direction){
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: notLandingPagebackground($direction);
+}
+
+@function landingPagebackground($direction){
+    @return linear-gradient($direction, black 20%, rgba(0,0,0,0.4)), linear-gradient(to top, black 20%, rgba(0,0,0,0.1)),url('../../files/services.jpg');
+}
+
+@mixin landingPageimagedBackground($direction){
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: landingPagebackground($direction);
+}
+
+@mixin input(){
+    border: none;
+    background-color: $heavyDark;
+    border-radius: 10px;
+    padding: 10px;
+    &:focus{
+        outline: none;
+    }
+    color: white;
+    margin: 15px 0px 0px 0px;
+}

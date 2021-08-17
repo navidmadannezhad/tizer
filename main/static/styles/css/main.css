@@ -158,15 +158,15 @@ html {
   }
 }
 
-header {
+header.home-page {
   position: relative;
 }
 
-header video {
+header.home-page video {
   width: 100%;
 }
 
-header div.header-introduction {
+header.home-page div.header-introduction {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,7 +189,7 @@ header div.header-introduction {
   color: white;
 }
 
-header div.header-introduction div.content {
+header.home-page div.header-introduction div.content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,7 +202,7 @@ header div.header-introduction div.content {
   bottom: 10%;
 }
 
-header div.header-introduction div.content h1 {
+header.home-page div.header-introduction div.content h1 {
   font-size: 8rem;
   color: #b50303;
   font-family: oswald;
@@ -213,11 +213,11 @@ header div.header-introduction div.content h1 {
   transition: all 0.5s;
 }
 
-header div.header-introduction div.content h1:hover {
+header.home-page div.header-introduction div.content h1:hover {
   color: white;
 }
 
-header div.header-introduction div.content p {
+header.home-page div.header-introduction div.content p {
   font-size: 0.65rem;
   position: relative;
   bottom: 30px;
@@ -249,7 +249,7 @@ main.home-page div.header-seperator div.quote {
 }
 
 main.home-page div.header-seperator div.author {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-style: italic;
   color: rgba(255, 255, 255, 0.4);
 }
@@ -516,7 +516,7 @@ main.home-page div.service-work-seperator div.quote {
 }
 
 main.home-page div.service-work-seperator div.author {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-style: italic;
   color: rgba(255, 255, 255, 0.4);
 }
@@ -612,14 +612,14 @@ main.home-page div.corp-section div.corps div.corp img {
   nav svg {
     display: none;
   }
-  header {
+  header.home-page {
     width: 100%;
     min-height: 100vh;
   }
-  header video {
+  header.home-page video {
     display: none;
   }
-  header div.header-introduction {
+  header.home-page div.header-introduction {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -640,7 +640,7 @@ main.home-page div.corp-section div.corps div.corp img {
     height: 100%;
     width: 100%;
   }
-  header div.header-introduction div.content {
+  header.home-page div.header-introduction div.content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -688,7 +688,7 @@ main.home-page div.corp-section div.corps div.corp img {
             align-items: center;
   }
   main.home-page div.services-section div.services div.services-options ul li, main.home-page div.services-section div.services div.services-options ul div {
-    font-size: 0.7rem !important;
+    font-size: 0.8rem !important;
     margin: 15px 0px 0px 0px;
   }
   main.home-page div.services-section div.services div.services-options ul li::before, main.home-page div.services-section div.services div.services-options ul div::before {
@@ -761,12 +761,12 @@ main.home-page div.corp-section div.corps div.corp img {
 }
 
 @media only screen and (max-width: 450px) {
-  header div.header-introduction div.content h1 {
+  header.home-page div.header-introduction div.content h1 {
     font-size: 5rem;
     color: #b50303;
   }
-  header div.header-introduction div.content p {
-    font-size: 0.7rem;
+  header.home-page div.header-introduction div.content p {
+    font-size: 0.8rem;
     position: static;
   }
   main.home-page div.header-seperator, main.home-page div.service-work-seperator {
@@ -781,8 +781,8 @@ main.work-page div.work-section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, black), to(rgba(0, 0, 0, 0.4))), -webkit-gradient(linear, left bottom, left top, color-stop(20%, black), to(rgba(0, 0, 0, 0.1))), url("../../files/services.jpg");
-  background-image: linear-gradient(to right, black 20%, rgba(0, 0, 0, 0.4)), linear-gradient(to top, black 20%, rgba(0, 0, 0, 0.1)), url("../../files/services.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, black), to(rgba(0, 0, 0, 0.4))), -webkit-gradient(linear, left bottom, left top, color-stop(20%, black), to(rgba(0, 0, 0, 0.1))), url("../../files/about-page.jpg");
+  background-image: linear-gradient(to right, black 20%, rgba(0, 0, 0, 0.4)), linear-gradient(to top, black 20%, rgba(0, 0, 0, 0.1)), url("../../files/about-page.jpg");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -872,7 +872,746 @@ main.work-page div.work-section div.works div.work div.details p.description {
     padding: 20px 0px;
   }
   main.work-page div.work-section div.works div.work div.details p.description {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+
+main.about-page div.about-section {
+  width: 100%;
+  min-height: 80vh;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(20%, black), to(rgba(0, 0, 0, 0.4))), -webkit-gradient(linear, left bottom, left top, color-stop(20%, black), to(rgba(0, 0, 0, 0.1))), url("../../files/about-page.jpg");
+  background-image: linear-gradient(to left, black 20%, rgba(0, 0, 0, 0.4)), linear-gradient(to top, black 20%, rgba(0, 0, 0, 0.1)), url("../../files/about-page.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  position: relative;
+}
+
+main.about-page div.about-section > div {
+  width: 50%;
+}
+
+main.about-page div.about-section div.about {
+  color: white;
+}
+
+main.about-page div.about-section div.about div.description {
+  margin: 0px 100px 0px 0px;
+  font-size: 0.65rem;
+  line-height: 40px;
+}
+
+main.about-page div.about-section div.tv {
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.about-page div.about-section div.tv div.screen {
+  position: absolute;
+  width: 58.5%;
+  padding-top: 32%;
+  margin-bottom: 6%;
+  background-color: rgba(255, 255, 255, 0.3);
+  animation: tv 0.25s infinite alternate-reverse;
+}
+
+main.about-page div.about-section div.tv img {
+  width: 60%;
+}
+
+main.about-page div.work-section {
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, black), to(rgba(0, 0, 0, 0.4))), -webkit-gradient(linear, left bottom, left top, color-stop(20%, black), to(rgba(0, 0, 0, 0.1))), url("../../files/about-page.jpg");
+  background-image: linear-gradient(to right, black 20%, rgba(0, 0, 0, 0.4)), linear-gradient(to top, black 20%, rgba(0, 0, 0, 0.1)), url("../../files/about-page.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.about-page div.work-section > div {
+  width: 50%;
+}
+
+main.about-page div.work-section div.work-intro {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+main.about-page div.work-section div.work-intro p.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b50303;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: translate(0, -200px);
+          transform: translate(0, -200px);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+main.about-page div.work-section div.work-intro p.message {
+  font-size: 0.65rem;
+  color: #b3b3b3;
+  padding: 50px 70px;
+}
+
+main.about-page div.work-section div.work-intro a {
+  background-color: #b50303;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 60px;
+  font-size: 0.75rem;
+}
+
+main.about-page div.work-section div.works {
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-y: auto;
+}
+
+main.about-page div.work-section div.works div.work {
+  width: 60%;
+  margin: 75px 0px;
+  border: none;
+}
+
+main.about-page div.work-section div.top-darken, main.about-page div.work-section div.bottom-darken {
+  position: absolute;
+  width: 100%;
+  padding-top: 10%;
+  right: 0;
+  z-index: 100;
+}
+
+main.about-page div.work-section div.top-darken {
+  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+}
+
+main.about-page div.work-section div.bottom-darken {
+  bottom: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+}
+
+main.about-page div.work-section .keep-scrolling {
+  overflow-y: scroll;
+  /* Add the ability to scroll y axis*/
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+main.about-page div.work-section .keep-scrolling::-webkit-scrollbar {
+  display: none;
+}
+
+main.about-page div.work-section a.all-works-mobile {
+  background-color: #b50303;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 60px;
+  font-size: 0.75rem;
+  margin-top: 20px;
+  display: none;
+}
+
+main.about-page div.service-work-seperator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0px;
+  color: white;
+  background-color: black;
+  border-style: dotted none;
+  border-width: 3px;
+  border-color: #b50303;
+}
+
+main.about-page div.service-work-seperator div.quote {
+  font-size: 0.65rem;
+  padding: 0px 0px 5px 0px;
+}
+
+main.about-page div.service-work-seperator div.author {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+main.about-page div.team-section {
+  min-height: 100vh;
+  height: auto;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, black), to(#1b1b1b));
+  background: linear-gradient(to bottom, black 10%, #1b1b1b);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.about-page div.team-section div.team-intro {
+  margin-top: 100px;
+  width: 80%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+main.about-page div.team-section div.team-intro p.title {
+  color: #b50303;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: translate(20px, -20px);
+          transform: translate(20px, -20px);
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+main.about-page div.team-section div.team-members {
+  margin-top: 50px;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main.about-page div.team-section div.team-members div.member {
+  width: 200px;
+  margin: 20px;
+  text-align: center;
+}
+
+main.about-page div.team-section div.team-members div.member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+main.about-page div.team-section div.team-members div.member img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+main.about-page div.team-section div.team-members div.member p.member-name {
+  font-size: 1rem;
+  color: white;
+}
+
+main.about-page div.team-section div.team-members div.member p.member-about {
+  font-size: 0.65rem;
+  color: #bbbbbb;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 700px) {
+  div.team-section div.team div.team-intro {
+    margin: 0px 50px 0px 0px !important;
+  }
+  div.team-section div.team div.description {
+    margin: 0px 50px 0px 0px !important;
+  }
+  div.work-section div.work-intro a {
+    background-color: #b50303;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 60px;
+    font-size: 0.75rem;
+    padding: 10px 40px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  main.about-page div.about-section {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url("../../files/about-page.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../../files/about-page.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main.about-page div.about-section div.about {
+    width: 100%;
+  }
+  main.about-page div.about-section div.about div.description {
+    margin: 0px 0px 0px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 50px;
+  }
+  main.about-page div.about-section div.tv {
+    display: none;
+  }
+  main.about-page div.work-section {
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 100px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url("../../files/about-page.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("../../files/about-page.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main.about-page div.work-section > div {
+    width: 100%;
+  }
+  main.about-page div.work-section div.work-intro {
+    margin-top: 100px;
+  }
+  main.about-page div.work-section div.work-intro p.title {
+    font-size: 1.2rem !important;
+  }
+  main.about-page div.work-section div.work-intro a.all-works-desktop {
+    display: none;
+  }
+  main.about-page div.work-section div.works {
+    height: auto;
+  }
+  main.about-page div.work-section div.works div.work {
+    width: 60%;
+    margin: 10px 0px;
+  }
+  main.about-page div.work-section div.top-darken, main.about-page div.work-section div.bottom-darken {
+    display: none;
+  }
+  main.about-page div.work-section a.all-works-mobile {
+    display: inline-block;
+    padding: 15px 0px;
+    text-align: center;
+    width: 60%;
+  }
+  main.about-page div.team-section {
+    padding-bottom: 100px;
+  }
+  main.about-page div.team-section div.team-intro {
+    font-size: 1.2rem !important;
+    text-align: center;
+  }
+  main.about-page div.team-section div.team-members {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  header div.header-introduction div.content h1 {
+    font-size: 5rem;
+    color: #b50303;
+  }
+  header div.header-introduction div.content p {
+    font-size: 0.8rem;
+    position: static;
+  }
+  main.about-page div.header-seperator, main.about-page div.service-work-seperator {
+    text-align: center;
+    padding: 50px 30px;
+  }
+}
+
+main.contact-page {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(20%, black), to(rgba(0, 0, 0, 0.4))), -webkit-gradient(linear, left bottom, left top, color-stop(20%, black), to(rgba(0, 0, 0, 0.1))), url("../../files/about-page.jpg");
+  background-image: linear-gradient(to top, black 20%, rgba(0, 0, 0, 0.4)), linear-gradient(to top, black 20%, rgba(0, 0, 0, 0.1)), url("../../files/about-page.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.contact-page div.contact-information-intro, main.contact-page div.rapid-contact-intro, main.contact-page div.address-info {
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+}
+
+main.contact-page div.contact-choices {
+  width: 80%;
+  height: auto;
+  padding: 100px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+main.contact-page div.contact-choices > div {
+  width: 40%;
+}
+
+main.contact-page div.contact-choices div.rapid-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.contact-page div.contact-choices div.rapid-contact input, main.contact-page div.contact-choices div.rapid-contact textarea {
+  border: none;
+  background-color: #171717;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  margin: 15px 0px 0px 0px;
+  width: 100%;
+}
+
+main.contact-page div.contact-choices div.rapid-contact input:focus, main.contact-page div.contact-choices div.rapid-contact textarea:focus {
+  outline: none;
+}
+
+main.contact-page div.contact-choices div.rapid-contact div.submit {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.contact-page div.contact-choices div.rapid-contact div.submit div.captcha, main.contact-page div.contact-choices div.rapid-contact div.submit input[type="submit"] {
+  width: 40%;
+}
+
+main.contact-page div.contact-choices div.contact-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.contact-page div.contact-choices div.contact-information div.information {
+  width: 100%;
+}
+
+main.contact-page div.contact-choices div.contact-information div.information div {
+  margin-top: 15px;
+}
+
+main.contact-page div.contact-choices div.contact-information div.information div span {
+  font-size: 0.65rem;
+  color: white;
+}
+
+main.contact-page div.contact-choices div.contact-information div.information div.social-media {
+  color: white;
+}
+
+main.contact-page div.contact-choices div.contact-information div.information div.social-media span:nth-of-type(2) a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0px 10px 0px 0px;
+  position: relative;
+  top: 6px;
+}
+
+main.contact-page div.contact-choices div.contact-information div.information div span:first-of-type {
+  color: #7d7d7d;
+}
+
+main.contact-page div.address {
+  width: 80%;
+}
+
+main.contact-page div.address div.address-info {
+  padding: 0px 0px 30px 0px;
+}
+
+main.contact-page div.address div.map {
+  width: 100%;
+}
+
+main.contact-page div.address div.map iframe {
+  width: 100%;
+}
+
+@media only screen and (max-width: 850px) {
+  main.contact-page div.contact-information-intro, main.contact-page div.rapid-contact-intro, main.contact-page div.address-info {
+    text-align: center;
+  }
+  main.contact-page div.contact-choices {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main.contact-page div.contact-choices > div {
+    width: 100%;
+  }
+  main.contact-page div.contact-choices div.rapid-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main.contact-page div.contact-choices div.rapid-contact input, main.contact-page div.contact-choices div.rapid-contact textarea {
+    border: none;
+    background-color: #171717;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    margin: 15px 0px 0px 0px;
+    width: 100%;
+  }
+  main.contact-page div.contact-choices div.rapid-contact input:focus, main.contact-page div.contact-choices div.rapid-contact textarea:focus {
+    outline: none;
+  }
+  main.contact-page div.contact-choices div.rapid-contact textarea {
+    height: 200px;
+  }
+  main.contact-page div.contact-choices div.rapid-contact div.submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main.contact-page div.contact-choices div.rapid-contact div.submit div.captcha, main.contact-page div.contact-choices div.rapid-contact div.submit input[type="submit"] {
+    width: 100%;
+  }
+  main.contact-page div.contact-choices div.contact-information {
+    margin-top: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main.contact-page div.contact-choices div.contact-information div.information div {
+    margin-top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main.contact-page div.contact-choices div.contact-information div.information div span {
+    font-size: 0.8rem;
+    color: white;
+  }
+  main.contact-page div.contact-choices div.contact-information div.information div.social-media {
+    color: white;
+  }
+  main.contact-page div.contact-choices div.contact-information div.information div.social-media span:nth-of-type(2) a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 0px 10px 0px 0px;
+    position: relative;
+    top: 6px;
+  }
+  main.contact-page div.contact-choices div.contact-information div.information div span:first-of-type {
+    color: #7d7d7d;
+    padding: 10px;
+  }
+  main.contact-page div.address {
+    width: 100%;
   }
 }
 
@@ -896,6 +1635,37 @@ body {
 
 p.not-found-message {
   color: white;
+}
+
+header.about-page, header.work-page, header.contact-page {
+  width: 100%;
+  height: 20vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(20%, black), to(rgba(0, 0, 0, 0.4))), -webkit-gradient(linear, left bottom, left top, color-stop(20%, black), to(rgba(0, 0, 0, 0.1))), url("../../files/about-page.jpg");
+  background-image: linear-gradient(to top, black 20%, rgba(0, 0, 0, 0.4)), linear-gradient(to top, black 20%, rgba(0, 0, 0, 0.1)), url("../../files/about-page.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px dotted #b50303;
+}
+
+header.about-page p.intro, header.work-page p.intro, header.contact-page p.intro {
+  padding: 0px 100px 0px 0px;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
 }
 
 nav {
@@ -1094,7 +1864,7 @@ footer div.footer-quote div.quote {
 }
 
 footer div.footer-quote div.author {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-style: italic;
   color: rgba(255, 255, 255, 0.4);
 }
@@ -1120,6 +1890,11 @@ footer div.footer-logo {
 }
 
 @media only screen and (max-width: 700px) {
+  header.about-page p.intro, header.work-page p.intro, header.contact-page p.intro {
+    width: 100%;
+    text-align: center;
+    padding: 0px !important;
+  }
   nav {
     background-color: transparent;
   }
@@ -1173,7 +1948,7 @@ footer div.footer-logo {
     padding: 0px 0px 5px 0px;
   }
   footer div.footer-quote div.author {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-style: italic;
     color: rgba(255, 255, 255, 0.4);
   }

@@ -5,7 +5,66 @@
 {% endblock %}
 
 {% block 'content' %}
-<h1>
-    contact us
-</h1>
+<header class="about-page">
+    <p class="intro">
+        ارتباط با ما
+    </p>
+</header>
+
+<main class="contact-page">
+    <div class="contact-choices">
+        <div class="rapid-contact">
+            <div class="rapid-contact-intro">
+                ارتباط سریع
+            </div>
+            <form action="" method="post">
+                <input type="text" name="name" placeholder="نام و نام خانوادگی">
+                <input type="email" name="email" placeholder="ایمیل (در جایی منتشر نمی‌شود)">
+                <input type="subject" name="subject" placeholder="موضوع پیام">
+                <textarea name="message" placeholder="متن پیام"></textarea>
+    
+                <div class="submit">
+                    <div class="captcha">
+
+                    </div>
+                    <input type="submit" value="ارسال پیام">
+                </div>
+            </form>
+        </div>
+        <div class="contact-information">
+            <div class="contact-information-intro">
+                اطلاعات ارتباطی
+            </div>
+            <div class="information">
+                <div class="email">
+                    <span>ایمیل:</span>
+                    <span>navidproject283@gmail.com</span>
+                </div>
+                <div class="phone_number">
+                    <span>شماره تماس:</span>
+                    <span>09111111111</span>
+                </div>
+                <div class="social-media">
+                    <span>شبکه‌های مجازی:</span>
+                    <span>
+                        <a href="">
+                        <i class="fab fa-instagram"></i>
+                      </a>
+                      <a href=""><i class="fab fa-telegram-plane"></i></a>
+                      <a href=""><i class="fab fa-whatsapp"></i></a>
+                      <a href=""><i class="fab fa-linkedin-in"></i></a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="address">
+        <div class="address-info">
+            آدرس ما
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.221600120421!2d50.96965375089903!3d35.843569428561565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dbf1fcae64fed%3A0xe6460055700c2bef!2sNika%20Mall!5e0!3m2!1sen!2sfr!4v1629205201095!5m2!1sen!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</main>
 {% endblock %}

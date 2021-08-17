@@ -90,6 +90,9 @@
     {% if request.path == "/" %}
       <script src="{% static 'styles/js/home.js' %}"></script>
     {% endif %}
+    {% if request.path == "/about/" %}
+      <script src="{% static 'styles/js/about.js' %}"></script>
+    {% endif %}
     <script src="{% static 'styles/js/base.js' %}"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/7b0dcc43a4.js" crossorigin="anonymous"></script>

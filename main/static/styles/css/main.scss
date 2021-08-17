@@ -1,4 +1,5 @@
 // importing constants
+@import 'constants/additionals';
 @import 'constants/fonts';
 @import 'constants/colors';
 @import 'constants/flex';
@@ -6,6 +7,8 @@
 
 @import 'home';
 @import 'work';
+@import 'about';
+@import 'contact';
 
 *{
     padding: 0px;
@@ -27,6 +30,20 @@ body{
 
 p.not-found-message{
     color: white;
+}
+
+header.about-page, header.work-page, header.contact-page{
+    width: 100%;
+    height: 20vh;
+    @include notLandingPageImagedBackground(to top);
+    @include flex-row-start-center();
+    border-bottom: 1px dotted $bloody_red;
+    p.intro{
+        padding: 0px 100px 0px 0px;
+        font-size: $font2;
+        color: white;
+        font-weight: bold;
+    }
 }
 
 nav{
@@ -172,6 +189,14 @@ footer{
 
 // Responsive codes
 @media only screen and (max-width:700px){
+    header.about-page, header.work-page, header.contact-page{
+        p.intro{
+            width: 100%;
+            text-align: center;
+            padding: 0px !important;
+        }
+    }
+
     nav{
         background-color: transparent;
         div.navigator{

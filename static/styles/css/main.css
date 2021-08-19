@@ -431,9 +431,6 @@ main.home-page div.work-section div.works {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   overflow-y: auto;
 }
 
@@ -441,6 +438,11 @@ main.home-page div.work-section div.works div.work {
   width: 60%;
   margin: 75px 0px;
   border: none;
+}
+
+main.home-page div.work-section div.works p.not-found-message {
+  position: relative;
+  top: 45%;
 }
 
 main.home-page div.work-section div.top-darken, main.home-page div.work-section div.bottom-darken {
@@ -760,6 +762,13 @@ main.home-page div.corp-section div.corps div.corp img {
   }
 }
 
+div.not-found-warning {
+  font-size: 0.65rem;
+  color: white !important;
+  text-align: center;
+  width: 100%;
+}
+
 @media only screen and (max-width: 450px) {
   header.home-page div.header-introduction div.content h1 {
     font-size: 5rem;
@@ -1031,9 +1040,6 @@ main.about-page div.work-section div.works {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   overflow-y: auto;
 }
 
@@ -1041,6 +1047,11 @@ main.about-page div.work-section div.works div.work {
   width: 60%;
   margin: 75px 0px;
   border: none;
+}
+
+main.about-page div.work-section div.works p.not-found-message {
+  position: relative;
+  top: 45%;
 }
 
 main.about-page div.work-section div.top-darken, main.about-page div.work-section div.bottom-darken {
@@ -1174,6 +1185,11 @@ main.about-page div.team-section div.team-members {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+main.about-page div.team-section div.team-members div.not-found-warning {
+  font-size: 0.65rem;
+  color: white;
 }
 
 main.about-page div.team-section div.team-members div.member {
@@ -1408,6 +1424,10 @@ main.contact-page div.contact-choices div.rapid-contact {
           align-items: center;
 }
 
+main.contact-page div.contact-choices div.rapid-contact form {
+  width: 100%;
+}
+
 main.contact-page div.contact-choices div.rapid-contact input, main.contact-page div.contact-choices div.rapid-contact textarea {
   border: none;
   background-color: #171717;
@@ -1422,25 +1442,17 @@ main.contact-page div.contact-choices div.rapid-contact input:focus, main.contac
   outline: none;
 }
 
-main.contact-page div.contact-choices div.rapid-contact div.submit {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+main.contact-page div.contact-choices div.rapid-contact div.error {
+  color: white;
+  background-color: #ff5252;
+  padding: 5px;
+  font-size: 0.65rem;
+  margin-top: 5px;
+  border-radius: 5px;
 }
 
-main.contact-page div.contact-choices div.rapid-contact div.submit div.captcha, main.contact-page div.contact-choices div.rapid-contact div.submit input[type="submit"] {
-  width: 40%;
+main.contact-page div.contact-choices div.rapid-contact input[type="submit"] {
+  background-color: #008200;
 }
 
 main.contact-page div.contact-choices div.contact-information {
@@ -1563,6 +1575,9 @@ main.contact-page div.address div.map iframe {
   }
   main.contact-page div.contact-choices div.rapid-contact div.submit div.captcha, main.contact-page div.contact-choices div.rapid-contact div.submit input[type="submit"] {
     width: 100%;
+  }
+  main.contact-page div.contact-choices div.rapid-contact div.error {
+    font-size: 0.8rem;
   }
   main.contact-page div.contact-choices div.contact-information {
     margin-top: 100px;

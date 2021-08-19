@@ -1,0 +1,37 @@
+{% extends './base.html' %}
+
+{% block 'title' %}
+پروژه‌ها
+{% endblock %}
+
+{% block 'content' %}
+<header class="work-page">
+    <p class="intro">
+          پروژه‌های انجام شده
+    </p>
+</header>
+
+<main class="work-page">
+    <div class="work-section">
+        {% if works %}
+            <div class="works">
+                {% for work in works %}
+                    <div class="work" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
+                        <div class="video">
+                           {{ work.work_url |safe }}
+                        </div>
+                        <div class="details">
+                            <p class="title">{{ work.work_name }}</p>
+                            <p class="description">{{ work.work_description }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="not-found-message">
+                نمونه کار ها به زودی بروزرسانی می‌شوند.
+            </p>
+        {% endif %}
+    </div>
+</main>
+{% endblock %}

@@ -50,16 +50,12 @@
         <div class="top-darken"></div>
         <div class="works keep-scrolling">
 
-            {% if True %}
-                <div class="work">
-                    <div id="79039686089"><script type="text/JavaScript" src="https://www.aparat.com/embed/0klxC?data[rnddiv]=79039686089&data[responsive]=yes"></script></div>
-                </div>
-                <div class="work">
-                    <div id="10080156393"><script type="text/JavaScript" src="https://www.aparat.com/embed/NO5si?data[rnddiv]=10080156393&data[responsive]=yes"></script></div>
-                </div>
-                <div class="work">
-                    <div id="87668251956"><script type="text/JavaScript" src="https://www.aparat.com/embed/i2rXT?data[rnddiv]=87668251956&data[responsive]=yes"></script></div>
-                </div>
+            {% if works %}
+                {% for work in works %}
+                    <div class="work">
+                        {{ work.work_url |safe }}
+                    </div>
+                {% endfor %}
             {% else %}
                 <p class="not-found-message">
                     نمونه کار‌ها به زودی به روزرسانی می‌شوند
@@ -82,42 +78,23 @@
             </p>
         </div>
         <div class="team-members">
-            <div class="member">
-                <img src="{% static 'files/jack.jpg' %}" alt="" class="member-image">
-                <p class="member-name">
-                    جک ما
-                </p>
-                <p class="member-about">
-                    انیماتور و سرپرست تیم
-                </p>
-            </div>
-            <div class="member">
-                <img src="{% static 'files/jack.jpg' %}" alt="" class="member-image">
-                <p class="member-name">
-                    جک ما
-                </p>
-                <p class="member-about">
-                    انیماتور و سرپرست تیم
-                </p>
-            </div>
-            <div class="member">
-                <img src="{% static 'files/jack.jpg' %}" alt="" class="member-image">
-                <p class="member-name">
-                    جک ما
-                </p>
-                <p class="member-about">
-                    انیماتور و سرپرست تیم
-                </p>
-            </div>
-            <div class="member">
-                <img src="{% static 'files/jack.jpg' %}" alt="" class="member-image">
-                <p class="member-name">
-                    جک ما
-                </p>
-                <p class="member-about">
-                    انیماتور و سرپرست تیم
-                </p>
-            </div>
+            {% if team_members %}
+                {% for member in team_members %}
+                <div class="member">
+                    <img src="{% get_media_prefix %}{{ member.member_image }}" alt="" class="member-image">
+                    <p class="member-name">
+                        {{ member.member_name }}
+                    </p>
+                    <p class="member-about">
+                        {{ member.member_job }}
+                    </p>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="not-found-warning">
+                    به زودی اعضای تیم بروزرسانی می‌شوند
+                </div>
+            {% endif %}
 
         </div>
     </div>

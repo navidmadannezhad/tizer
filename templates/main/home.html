@@ -80,16 +80,12 @@
         <div class="top-darken"></div>
         <div class="works keep-scrolling">
 
-            {% if True %}
-                <div class="work">
-                    <div id="79039686089"><script type="text/JavaScript" src="https://www.aparat.com/embed/0klxC?data[rnddiv]=79039686089&data[responsive]=yes"></script></div>
-                </div>
-                <div class="work">
-                    <div id="10080156393"><script type="text/JavaScript" src="https://www.aparat.com/embed/NO5si?data[rnddiv]=10080156393&data[responsive]=yes"></script></div>
-                </div>
-                <div class="work">
-                    <div id="87668251956"><script type="text/JavaScript" src="https://www.aparat.com/embed/i2rXT?data[rnddiv]=87668251956&data[responsive]=yes"></script></div>
-                </div>
+            {% if works %}
+                {% for work in works %}
+                    <div class="work">
+                        {{ work.work_url |safe }}
+                    </div>
+                {% endfor %}
             {% else %}
                 <p class="not-found-message">
                     نمونه کار‌ها به زودی به روزرسانی می‌شوند
@@ -113,28 +109,15 @@
         </div>
         <div class="corps">
             <div class="corp">
-                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
-            </div>
-            <div class="corp">
-                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
-            </div>
-            <div class="corp">
-                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
-            </div>
-            <div class="corp">
-                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
-            </div>
-            <div class="corp">
-                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
-            </div>
-            <div class="corp">
-                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
-            </div>
-            <div class="corp">
-                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
-            </div>
-            <div class="corp">
-                <img src="{% static 'files/snapp.png' %}" alt="" class="corp-image">
+                {% if corporates %}
+                    {% for corporate in corporates %}
+                    <img src="{% get_media_prefix %}{{ corporate.corp_image }}" alt="" class="corp-image">
+                    {% endfor %}
+                {% else %}
+                    <div class="not-found-warning">
+                        به زودی همکاری ها بروزرسانی می‌شوند
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>

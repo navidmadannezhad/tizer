@@ -17,18 +17,21 @@
             <div class="rapid-contact-intro">
                 ارتباط سریع
             </div>
-            <form action="" method="post">
-                <input type="text" name="name" placeholder="نام و نام خانوادگی">
-                <input type="email" name="email" placeholder="ایمیل (در جایی منتشر نمی‌شود)">
-                <input type="subject" name="subject" placeholder="موضوع پیام">
-                <textarea name="message" placeholder="متن پیام"></textarea>
-    
-                <div class="submit">
-                    <div class="captcha">
+            <form action="{% url 'main:contact' %}" method="post" novalidate>
+                {% csrf_token %}
 
-                    </div>
-                    <input type="submit" value="ارسال پیام">
-                </div>
+                {% for field in form %}
+                    {{ field }}
+                    {% if field.errors %}
+                        {% for error in field.errors %}
+                            <div class="error">
+                                {{ error }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+    
+                <input type="submit" value="ارسال پیام">
             </form>
         </div>
         <div class="contact-information">

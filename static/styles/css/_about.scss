@@ -1,106 +1,38 @@
-header.home-page{
-    position: relative;
-    video{
+main.about-page{
+    div.about-section{
         width: 100%;
-    }
-
-    div.header-introduction{
-        @include flex-center-center();
-
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        background-color: rgba(0,0,0,0.3);
-        height: 98.5%;
-        width: 100%;
-        color: white;
-
-        div.content{
-            @include flex-column();
-            position: relative;
-            left: 20%;
-            bottom: 10%;
-            h1{
-                font-size: $font1;
-                color: $bloody_red;
-                font-family: oswald;
-                animation: header_title 0.25s infinite alternate-reverse;
-                animation-timing-function: ease-in-out;
-                transition: all 0.5s;
-            }
-            h1:hover{
-                color: white;
-            }
-            p{
-                font-size: $font4;
-                position: relative;
-                bottom: 30px;
-            }
-        }
-    }
-}
-
-main.home-page{
-    margin-top: -15px;
-    div.header-seperator{
-        @include quote-seperator();
-        background-color: $bloody_red;
-    }
-
-    div.services-section{
-        width: 100%;
-        min-height: 100vh;
+        min-height: 80vh;
         height: auto;
-        @include landingPageimagedBackground(to left);
-        @include flex-row();
+        @include notLandingPageImagedBackground(to left);
+        @include flex-row-between-center();
         align-items: center;
         position: relative;
         & > div{
             width: 50%;
         }
-        div.services{
+        div.about{
             color: white;
-            
-            div.services-intro{
+            div.description{
                 margin: 0px 100px 0px 0px;
-                font-size: $font2;
-                font-weight: bold;
-                @include fadeWhenNotScrolled(20px, -20px);
-            }
-            div.services-options{
-                ul{
-                    margin: 0px 100px 0px 0px;
-                    list-style: none;
-                    li{
-                        font-size: $font4;
-                        margin: 30px 50px 0px 0px;
-                        color: rgb(179, 179, 179);
-                        &::before{
-                            content: "\2022"; 
-                            color: $bloody_red; 
-                            font-weight: bold; 
-                            display: inline-block; 
-                            width: 1em; 
-                        }
-                    }
-                }
+                font-size: $font4;
+                line-height: 40px;
             }
         }
 
-        div.laptop{
+        div.tv{
             height: 100%;
             position: relative;
             @include flex-center-center();
             div.screen{
                 position: absolute;
-                width: 37%;
-                padding-top: 23%;
-                margin-bottom: 11%;
+                width: 58.5%;
+                padding-top: 32%;
+                margin-bottom: 6%;
                 background-color: rgba(255,255,255,0.3);
                 animation: tv 0.25s infinite alternate-reverse;
             }
             img{
-                width: 50%;
+                width: 60%;
             }
         }
     }
@@ -108,7 +40,7 @@ main.home-page{
     div.work-section{
         height: 100vh;
         position: relative;
-        @include landingPageimagedBackground(to right);
+        @include notLandingPageImagedBackground(to right);
         @include flex-row-reverse-between-center();
         & > div{
             width: 50%;
@@ -137,7 +69,6 @@ main.home-page{
             height: 100%;
             position: relative;
             @include flex-column-center();
-            justify-content: center;
             overflow-y: auto;
 
             div.work{
@@ -146,6 +77,10 @@ main.home-page{
                 border: none;
             }
             
+            p.not-found-message{
+                position: relative;
+                top: 45%;
+            }
         }
 
         div.top-darken, div.bottom-darken{
@@ -184,13 +119,13 @@ main.home-page{
         border-color: $bloody_red;
     }
 
-    div.corp-section{
+    div.team-section{
         min-height: 100vh;
         height: auto;
         background:linear-gradient(to bottom, black 10%, #1b1b1b);
         @include flex-column-center();
 
-        div.corp-intro{
+        div.team-intro{
             margin-top: 100px;
             width: 80%;
             font-size: $font2;
@@ -200,19 +135,38 @@ main.home-page{
                 @include fadeWhenNotScrolled(20px, -20px);
             }
         }
-        div.corps{
-            margin-top: 30px;
+        div.team-members{
+            margin-top: 50px;
             width: 80%;
-            @include flex-row();
-            justify-content:  center;
-            align-items: center;
+            @include flex-row-between-center();
             flex-wrap: wrap;
 
-            div.corp{
+            div.not-found-warning{
+                font-size: $font4;
+                color: white;
+            }
+
+            div.member{
                 width:200px;
-                margin: 0px 20px;
+                margin: 20px;
+                text-align: center;
                 img{
-                    width: 100%;
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    filter: grayscale(100%);
+                    transition: all 0.25s;
+                    &:hover{
+                        filter: grayscale(0%);
+                    }
+                }
+                p.member-name{
+                    font-size: $font3;
+                    color: white;
+                }
+                p.member-about{
+                    font-size: $font4;
+                    color: rgb(187, 187, 187);
                 }
             }
         }
@@ -223,15 +177,13 @@ main.home-page{
 
 // Responsive Codes
 @media only screen and (max-width: 900px) and (min-width: 700px){
-    div.services-section{
-        div.services{
-            div.services-intro{
+    div.team-section{
+        div.team{
+            div.team-intro{
                 margin: 0px 50px 0px 0px !important;
             }
-            div.services-options{
-                ul{
-                    margin: 0px 50px 0px 0px !important;
-                }
+            div.description{
+                margin: 0px 50px 0px 0px !important;
             }
         }
     }
@@ -247,75 +199,23 @@ main.home-page{
 }
 
 @media only screen and (max-width:700px){
-    nav{
-        background-color: transparent;
-        svg{
-            display: none;
-        }
-    }
-    
-    header.home-page{
-        width: 100%;
-        min-height: 100vh;
-        video{
-            display: none
-        }
-    
-        div.header-introduction{
-            @include flex-center-center();
-
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../../files/mobile-background.jpeg');
-            background-size: cover;
-            background-position: center;
-            height: 100%;
-            width: 100%;
-    
-            div.content{
-                @include flex-column-center();
-                position: static;
-            }
-        }
-    }
-
-    main.home-page{
-        margin-top: -15px;
-        div.services-section{
-            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url('../../files/services.jpg');
+    main.about-page{
+        div.about-section{
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url('../../files/about-page.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             align-items: center;
-            div.services{
+            div.about{
                 width: 100%;
-                text-align: center;
-
-                div.services-intro{
-                    margin: 0px 0px;
-                    font-size: $font2_responsive !important;
-                }
-                div.services-options{
-                    ul{
-                        margin: 0px 0px 0px 0px;
-                        @include flex-column-center();
-                        li, div{
-                            font-size: $font4_responsive !important;
-                            margin: 15px 0px 0px 0px;
-                            
-                            &::before{
-                                content: ""; 
-                            }
-                        }
-                        div.seperator{
-                            width: 30px;
-                            height: 5px;
-                            border-radius: 5px;
-                            background-color: $bloody_red;
-                        }
-                    }
+                div.description{
+                    margin: 0px 0px 0px 0px;
+                    @include flex-column-center();
+                    padding: 50px;
                 }
             }
     
-            div.laptop{
+            div.tv{
                 display: none;
             }
         }
@@ -324,7 +224,7 @@ main.home-page{
             min-height: 100vh;
             height: auto;
             padding-bottom: 100px;
-            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url('../../files/services.jpg');
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),url('../../files/about-page.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -365,18 +265,21 @@ main.home-page{
                
         }
 
-        div.corp-section{
+        div.team-section{
             padding-bottom: 100px;
-            div.corp-intro{
+            div.team-intro{
                 font-size: $font2_responsive !important;
                 text-align: center;
+            }
+            div.team-members{
+                @include flex-center-center();
             }
         }
     }
 }
 
 @media only screen and (max-width:450px){
-    header.home-page{
+    header{
     
         div.header-introduction{
     
@@ -393,7 +296,7 @@ main.home-page{
         }
     }
 
-    main.home-page{
+    main.about-page{
         div.header-seperator, div.service-work-seperator{
             @include quote-seperator-responsive();
         }

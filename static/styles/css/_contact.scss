@@ -20,17 +20,23 @@ main.contact-page{
 
         div.rapid-contact{
             @include flex-column-center();
+            form{
+                width: 100%;
+            }
             input, textarea{
                 @include input();
                 width: 100%;
             }
-            div.submit{
-                width: 100%;
-                @include flex-row-between-center();
-
-                div.captcha, input[type="submit"]{
-                    width: 40%;
-                }
+            div.error{
+                color: white;
+                background-color: rgb(255, 82, 82);
+                padding: 5px;
+                font-size: $font4;
+                margin-top:5px;
+                border-radius: 5px;
+            }
+            input[type="submit"]{
+                background-color: rgb(0, 130, 0);
             }
         }
 
@@ -107,6 +113,9 @@ main.contact-page{
                     div.captcha, input[type="submit"]{
                         width: 100%;
                     }
+                }
+                div.error{
+                    font-size: $font4_responsive;
                 }
             }
     

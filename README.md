@@ -1,5 +1,5 @@
 # tizer
-## Tizer website project for faraSazan Sapra
+Tizer website project for faraSazan Sapra
 
 ###### Plot twist:
 
